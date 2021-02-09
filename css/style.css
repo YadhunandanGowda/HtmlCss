@@ -1,0 +1,26 @@
+@font-face {
+    font-family: Flamante-Round-Medium-FFP;
+    src: url('../fonts/Flamante-Round-Medium-FFP.ttf');
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #efefef;
+  background: radial-gradient(rgb(255, 255, 255), rgb(200, 200, 200));
+}
+
+svg {
+  opacity: 0;
+  overflow: visible;
+  position: absolute;
+  left: 50%;
+  top: 53%;
+  transform: translate(-50%, -50%);
+}

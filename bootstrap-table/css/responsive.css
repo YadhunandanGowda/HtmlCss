@@ -1,0 +1,769 @@
+@media only screen and (max-width: 1024px) {
+
+    /* common css Starts  */
+
+    .tbl-cntr {
+        margin: 10px 50px 0px;
+    }
+
+    .titl {
+        font-size: 28px;
+    }
+
+    /* common css Ends  */
+
+
+    /* home page css starts */
+
+    .landing-page .cntr-cont .options {
+        margin-top: 50px;
+    }
+
+    /* home page css ends */
+
+
+    /* resource page css starts */
+
+    .resource-search-landing .form-blk label {
+        display: block;
+    }
+
+    .resource-search-landing .form-blk .chosen-container-multi .chosen-choices li.search-choice {
+        line-height: 20px;
+    }
+
+    .resource-search-landing .form-blk .chosen-container-multi .chosen-choices li.search-choice {
+        padding-right: 5px;
+    }
+
+    .resource-search-landing .form-blk .chosen-container-multi .chosen-choices li.search-choice .search-choice-close {
+        display: none;
+    }
+
+    /* resource page css ends */
+
+    /* open requisition page css starts */
+    /* open requisition page css ends */
+
+
+
+    /* close requisition page css starts */
+
+    .close-requisition-landing .date-blk .col-md-3 {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+
+    /* close requisition page css ends */
+
+
+    /* code details page css starts */
+    .code-details-landing .details-section .basic-details-section,
+    .code-details-landing .details-section .job-details-section,
+    .code-details-landing .details-section .primary-skill-section,
+    .code-details-landing .details-section .secondary-skill-section {
+        margin: 0px 50px;
+    }
+
+    .code-details-landing .details-section .basic-details-section table tr td,
+    .code-details-landing .details-section .basic-details-section table tr td:nth-child(odd),
+    .code-details-landing .details-section .basic-details-section table tr td:nth-child(even) {
+        display: inline-block;
+        width: 50%;
+    }
+
+    .code-details-landing .details-section .basic-details-section table tr td:nth-child(3) {
+        padding-left: 0px;
+    }
+
+    /* code details page css ends */
+
+    /* Proposed resources Page CSS Starts */
+
+    /* Proposed resources Page CSS Ends */
+
+
+    /* View Joiners Pipeline Page CSS Starts */
+
+    .view-joiners-pipeline-landing .calendar .month .completeWeek .week .alldays {
+        justify-content: center;
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-next {
+        right: 28%;
+        top: 5%;
+        transform: translate(0%, -5%);
+        z-index: 9;
+        background-image: url(../images/mob-next.svg);
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-prev {
+        left: 28%;
+        top: 5%;
+        transform: translate(0%, -5%);
+        z-index: 9;
+        background-image: url(../images/mob-prev.svg);
+    }
+
+
+
+    .view-joiners-pipeline-landing .calendar .completeWeek .slick-prev {
+        left: 38%;
+        width: 20px;
+        height: 20px;
+        top: 10%;
+        transform: translate(-0%, -10%);
+        z-index: 99;
+        background-image: url(../images/mob-prev.svg);
+    }
+
+
+    .view-joiners-pipeline-landing .calendar .completeWeek .slick-next {
+        right: 38%;
+        width: 20px;
+        height: 20px;
+        top: 10%;
+        transform: translate(-0%, -10%);
+        z-index: 99;
+        background-image: url(../images/mob-next.svg);
+    }
+
+    /* View Joiners Pipeline Page CSS Ends */
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    /* common css Starts  */
+
+    .code-details-landing .details-section .search-result-section .tbl-cntr .table td:first-child,
+    .code-details-landing .details-section .search-result-section .tbl-cntr .table th:first-child,
+    .proposed-resources-landing .tbl-cntr .table td:first-child,
+    .proposed-resources-landing .tbl-cntr .table th:first-child,
+    .code-details-landing .details-section .proposed-resources-section .tbl-cntr .table td:first-child,
+    .code-details-landing .details-section .proposed-resources-section .tbl-cntr .table th:first-child {
+        min-width: auto;
+        max-width: unset;
+    }
+
+    .table th,
+    .table td {
+        max-width: unset;
+        min-width: unset;
+    }
+
+    .tbl-cntr table {
+        width: 100%;
+    }
+
+    .tbl-cntr table,
+    .tbl-cntr thead,
+    .tbl-cntr tbody,
+    .tbl-cntr th,
+    .tbl-cntr td,
+    .tbl-cntr tr {
+        display: block;
+    }
+
+    .tbl-cntr thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .tbl-cntr tbody tr {
+        border: none;
+        position: relative;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+
+    .tbl-cntr tbody tr td:nth-child(2) {
+        padding-bottom: 20px;
+    }
+
+    .tbl-cntr tbody tr td:nth-child(n+3) {
+        display: none;
+    }
+
+    .tbl-cntr tbody tr.more td:nth-child(n+3) {
+        display: flex;
+    }
+
+    .tbl-cntr tbody tr.more td:nth-child(2) {
+        padding-bottom: 10px;
+    }
+
+    .tbl-cntr tbody tr td span.view-more {
+        background-image: url(../images/arrow-down-sign-to-navigate.svg);
+        color: #ffffff;
+        display: block;
+        position: absolute;
+        height: 20px;
+        width: 40px;
+        bottom: 0px;
+        left: 50%;
+        margin: 0px;
+        transform: translateX(-50%);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        z-index: 7;
+    }
+
+    .tbl-cntr tbody tr.more td span.view-more {
+        background-image: unset;
+    }
+
+    .tbl-cntr tbody tr.no-records-found::after {
+        content: unset;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .tbl-cntr tbody tr.more::after {
+        background: none;
+    }
+
+    .tbl-cntr tbody td span.header-info {
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+
+    .tbl-cntr tbody td {
+        justify-content: center;
+        display: flex;
+        border: none;
+        padding: 10px 0px;
+        border-bottom: 1px solid #ffffff4f;
+        margin: 0px 10px;
+    }
+
+    .tbl-cntr tbody td span {
+        width: 50%;
+        margin: 0px 20px;
+    }
+
+    .tbl-cntr tbody tr:first-child td {
+        border-top-left-radius: unset;
+        border-top-right-radius: unset;
+    }
+
+    .tbl-cntr {
+        margin: 20px 50px;
+        overflow-x: unset;
+    }
+
+    .table tbody tr td.req-no, .table tbody tr td.view-resume {
+        cursor: pointer;
+        text-align: left;
+    }
+
+    .navbar .navbar-nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navbar {
+        background: #0690c9;
+        padding: 0px;
+        margin: 0px 50px;
+        border-radius: 10px;
+    }
+
+    .navbar ul.navbar-nav li {
+        padding: 10px 20px;
+        color: #ffffff91;
+        font-size: 14px;
+        width: min-content;
+        text-align: center;
+        background: none;
+    }
+
+    .navbar ul.navbar-nav li.active {
+        font-weight: 900;
+        border-bottom: 3px solid white;
+        color: white;
+        background: none;
+    }
+
+    .navbar ul.navbar-nav li:first-child {
+        border-top-left-radius: unset;
+        border-bottom-left-radius: unset;
+    }
+
+    .navbar ul.navbar-nav li:last-child {
+        border-top-right-radius: unset;
+        border-bottom-right-radius: unset;
+    }
+
+    .titl {
+        padding: 20px 0px;
+        color: white;
+        margin-bottom: 0px;
+        font-size: 25px;
+    }
+
+    /* common css Ends  */
+
+    /* home page css starts */
+
+
+    /* home page css ends */
+
+
+    /* resource page css starts */
+    .resource-search-landing .form-blk .col-md-4 {
+        padding: 0px 25px;
+        flex: 0 0 70%;
+        max-width: 70%;
+        margin: 0px auto;
+    }
+
+    .resource-search-landing~.datepicker-dropdown {
+        transform: translate(3rem, 6.5em);
+    }
+
+    .resource-search-landing .form-blk .radio-blk {
+        text-align: center;
+    }
+
+    .resource-search-landing .form-blk .search-blk {
+        text-align: center;
+    }
+
+    /* resource page css ends */
+
+
+    /* open requisition page css starts */
+
+    .open-requisition-landing {
+        margin: 70px auto 20px;
+    }
+
+    /* open requisition page css ends */
+
+
+    /* Close requisition page css starts */
+
+    .close-requisition-landing {
+        margin: 70px auto 20px;
+    }
+
+    .close-requisition-landing .date-blk .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    /* Close requisition page css ends */
+
+
+    /* code details page css starts */
+
+    .code-details-landing .options {
+        padding: 20px 0px 50px;
+        top: 70px;
+        margin-bottom: 20px;
+    }
+
+    .code-details-landing .details-section {
+        margin: 70px auto 20px;
+    }
+
+    .code-details-landing .options ul li a {
+        padding: 8px 16px;
+        margin: 0px;
+    }
+
+    .code-details-landing .options ul li {
+        margin: 0 25px;
+    }
+
+    .code-details-landing .options ul li:after {
+        display: none;
+    }
+
+    .code-details-landing .options ul li:before {
+        bottom: -68px;
+        width: min-content;
+        padding: 5px 10px;
+        min-width: 70px;
+    }
+
+    .code-details-landing .options ul li.active::before {
+        border-bottom: 2px solid;
+    }
+
+    .code-details-landing .details-section .basic-details-section,
+    .code-details-landing .details-section .job-details-section,
+    .code-details-landing .details-section .primary-skill-section,
+    .code-details-landing .details-section .secondary-skill-section {
+        padding: 20px 40px;
+        margin: 0px 50px;
+    }
+
+    /* code details page css ends */
+
+
+    /* Proposed resources Page CSS Starts */
+
+    .proposed-resources-landing .tbl-cntr tbody tr.right-swipe {
+        left: -105px;
+    }
+
+    .proposed-resources-landing .tbl-cntr tbody tr.left-swipe {
+        left: 101px;
+    }
+
+    /* Proposed resources Page CSS Ends */
+
+
+    /* View Joiners Pipeline Page CSS Starts */
+
+
+    /* View Joiners Pipeline Page CSS Ends */
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* home page css starts */
+
+    .landing-page .cntr-cont img {
+        width: 100px;
+    }
+
+    .landing-page .cntr-cont h1 {
+        font-size: 30px;
+    }
+
+    .landing-page .cntr-cont .options a {
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+
+    /* home page css ends */
+
+
+    /* resource page css starts */
+
+    /* resource page css ends */
+
+
+    /* open requisition page css starts */
+    /* open requisition page css ends */
+
+
+
+    /* code details page css starts */
+    /* code details page css ends */
+
+
+    /* Proposed resources Page CSS Starts */
+
+    /* Proposed resources Page CSS Ends */
+
+    /* View Joiners Pipeline Page CSS Starts */
+
+
+    /* View Joiners Pipeline Page CSS Ends */
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    /* Common CSS Starts*/
+
+    .tbl-cntr {
+        margin: 20px;
+    }
+
+    .bootstrap-table .fixed-table-toolbar .keep-open .btn,
+    .bootstrap-table .fixed-table-toolbar .search-input,
+    .fixed-table-pagination,
+    .table tbody tr td.intw-status select,
+    .table tbody tr td.view-resume a,
+    table tr td {
+        font-size: 14px;
+    }
+
+    .bootstrap-table .fixed-table-pagination {
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .code-details-landing .details-section .search-result-section .submit-to-SAP,
+    .code-details-landing .details-section .search-result-section .export-btn,
+    .code-details-landing .details-section .search-result-section .submit-to-PM-btn {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    .bootstrap-table .fixed-table-pagination>.pagination ul.pagination a {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    .navbar {
+        margin: 0px 20px;
+    }
+
+    .navbar ul.navbar-nav li {
+        padding: 10px;
+    }
+
+    /* Common CSS Ends  */
+
+    /* home page css starts */
+
+
+    /* home page css ends */
+
+
+    /* resource page css starts */
+
+    .resource-search-landing~.datepicker-dropdown {
+        transform: translate(3rem, 8em);
+    }
+
+    .resource-search-landing .form-blk .col-md-4 {
+        padding: 0px 10px;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .resource-search-landing .form-blk.show {
+        margin: 20px 20px 10px;
+    }
+
+    .resource-search-landing .form-cls-btn {
+        top: 80px;
+        right: 20px;
+    }
+
+    .resource-search-landing .form-cls-btn::after {
+        left: 33%;
+        height: 40%;
+    }
+
+
+    .resource-search-landing .form-cls-btn::before {
+        left: 60%;
+        height: 40%;
+    }
+
+    /* .resource-search-landing .form-cls-btn::before,
+    .resource-search-landing .form-cls-btn::after {
+        left: 47%;
+    } */
+
+    .resource-search-landing .form-blk.show,
+    .resource-search-landing .form-blk .form-group input,
+    .resource-search-landing .form-blk .form-group .bootstrap-select,
+    .bootstrap-select>.dropdown-toggle.bs-placeholder,
+    .resource-search-landing .form-blk .date-blk .datepicker input,
+    .bootstrap-select>.dropdown-toggle {
+        font-size: 14px;
+    }
+
+    .resource-search-landing .form-blk .radio-blk {
+        margin-top: 25px;
+    }
+
+    .resource-search-landing h2 {
+        font-size: 25px;
+    }
+
+    .resource-search-landing .form-blk .chosen-container-multi .chosen-choices li.search-field {
+        font-size: 14px;
+    }
+
+    /* resource page css ends */
+
+
+    /* open requisition page css starts */
+
+    /* open requisition page css ends */
+
+
+    /* Close requisition page css starts */
+
+    .close-requisition-landing .date-blk {
+        margin: 0px 20px;
+    }
+
+    .close-requisition-landing .date-blk .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .close-requisition-landing .date-blk .col-md-3:last-child .datepicker label {
+        padding-left: 20px;
+    }
+
+
+    /* Close requisition page css ends */
+
+
+    /* code details page css starts */
+    .code-details-landing .details-section .basic-details-section,
+    .code-details-landing .details-section .job-details-section,
+    .code-details-landing .details-section .primary-skill-section,
+    .code-details-landing .details-section .secondary-skill-section {
+        padding: 20px 30px;
+        margin: 0px 20px;
+    }
+
+    .code-details-landing .options ul {
+        display: flex;
+        overflow-x: scroll;
+        padding: 10px 0px 55px;
+        margin: 0px 20px;
+    }
+
+    .code-details-landing .options {
+        padding: 15px 0px 0px;
+    }
+
+    .code-details-landing .options ul li {
+        margin: 0 9px;
+        font-size: 15px;
+        padding: 6px 13px;
+    }
+
+    .code-details-landing .options ul li:before {
+        font-size: 14px;
+        bottom: -52px;
+    }
+
+    .code-details-landing .details-section .basic-details-section .title,
+    .code-details-landing .details-section .job-details-section .title,
+    .code-details-landing .details-section .primary-skill-section h3,
+    .code-details-landing .details-section .secondary-skill-section h3,
+    .code-details-landing .details-section .search-result-section h3 {
+        font-size: 22px;
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+
+    .code-details-landing .details-section .search-result-section h3 {
+        padding-bottom: 0px;
+    }
+
+    .code-details-landing .details-section .primary-skill-section p,
+    .code-details-landing .details-section .secondary-skill-section p {
+        font-size: 14px;
+    }
+
+    .code-details-landing .details-section .search-result-section .sbmt-btns.show {
+        padding: 10px 0px;
+    }
+
+
+    .code-details-landing .details-section .search-result-section .sbmt-btns.show a {
+        font-size: 14px;
+        padding: 8px 35px;
+        margin: 5px;
+    }
+
+    .code-details-landing .details-section .basic-details-section table tr td:nth-child(even) {
+        padding-left: 10px;
+    }
+
+    /* code details page css ends */
+
+
+    /* Proposed resources Page CSS Starts */
+
+    .proposed-resources-landing h2, .code-details-landing .details-section .proposed-resources-section h2 {
+        font-size: 24px;
+    }
+
+    /* .proposed-resources-landing .tbl-cntr tbody td span.accept {
+        height: 84px;
+        left: -104px;
+    } */
+
+    /* .proposed-resources-landing .tbl-cntr tbody td span.reject {
+        height: 84px;
+        right: -100px;
+
+    } */
+
+    /* .proposed-resources-landing .table tbody tr td.intw-status select {
+        width;
+    } */
+
+    /* Proposed resources Page CSS Ends */
+
+
+
+    /* View Joiners Pipeline Page CSS Starts */
+    .view-joiners-pipeline-landing .title {
+        font-size: 25px;
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-list .month h3 {
+        font-size: 22px;
+    }
+
+    .view-joiners-pipeline-landing .calendar .month .completeWeek .week h4 {
+        font-size: 20px;
+    }
+
+    .view-joiners-pipeline-landing .tbl-cntr,
+    .view-joiners-pipeline-landing .calendar {
+        margin: 20px;
+    }
+
+    .view-joiners-pipeline-landing .calendar .month .completeWeek .week .alldays {
+        justify-content: center;
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-list .month {
+        overflow-x: scroll;
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-next {
+        right: 15%;
+        top: 2%;
+        transform: translate(0%, -2%);
+        width: 25px;
+        height: 25px;
+    }
+
+    .view-joiners-pipeline-landing .calendar .slick-prev {
+        left: 15%;
+        top: 2%;
+        transform: translate(0%, -2%);
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+    .view-joiners-pipeline-landing .calendar .completeWeek .slick-prev {
+        left: 21%;
+        top: 6%;
+        transform: translate(-0%, -6%);
+    }
+
+
+    .view-joiners-pipeline-landing .calendar .completeWeek .slick-next {
+        right: 21%;
+        top: 6%;
+        transform: translate(-0%, -6%);
+    }
+
+    /* View Joiners Pipeline Page CSS Ends */
+
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/solar-svg.css">
+</head>
+
+<body>
+        <svg width="1340px" height="630px">
+                <defs>
+                        <linearGradient id="sun" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(255,255,0); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(255,70,0); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="mercury" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(100, 1, 100); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(255,70,0); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="venus" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(252, 252, 60); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(250, 163, 63); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="earth" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(60, 255, 0); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(0, 140, 255); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="mars" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(247, 116, 30); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(189, 53, 4); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="jupiter" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(248, 160, 77); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(226, 103, 3); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="saturn" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(252, 181, 28); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(197, 54, 3); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="uranus" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(134, 248, 248); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(10, 175, 252); stop-opacity:1;" />
+                        </linearGradient>
+                        <linearGradient id="neptune" x1="0%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:rgb(0, 4, 255); stop-opacity:1;" />
+                                <stop offset="100%" style="stop-color:rgb(55, 0, 255); stop-opacity:1;" />
+                        </linearGradient>
+                        <!-- <pattern id="image" x="0" y="0" patternUnits="userSpaceOnUse" height="1" width="1">
+                    <image x="0" y="0" xlink:href="sun-bg.png"></image>
+                  </pattern> -->
+                </defs>
+                <filter id="this_image" x="0%" y="0%" width="100%" height="100%">
+                        <feImage xlink:href="./sun-bg.png" />
+                </filter>
+                <path id='path1' fill='none' stroke-width='0.5' stroke='gray' d="
+                M20,315a650,300 0 1,0 1300,0a650,300 0 1,0 -1300,0
+                " />
+                <path id='path2' fill='none' stroke-width='0.5' stroke='gray' d="
+                M90,315a580,270 0 1,0 1160,0a580,270 0 1,0 -1160,0
+                " />
+                <path id='path3' fill='none' stroke-width='0.5' stroke='gray' d="
+                M160,315a510,240 0 1,0 1020,0a510,240 0 1,0 -1020,0
+                " />
+                <path id='path4' fill='none' stroke-width='0.5' stroke='gray' d="
+                M230,315a440,210 0 1,0 880,0a440,210 0 1,0 -880,0
+                " />
+                <path id='path5' fill='none' stroke-width='0.5' stroke='gray' d="
+                M300,315a370,180 0 1,0 740,0a370,180 0 1,0 -740,0
+                " />
+                <path id='path6' fill='none' stroke-width='0.5' stroke='gray' d="
+                M370,315a300,150 0 1,0 600,0a300,150 0 1,0 -600,0
+                " />
+                <path id='path7' fill='none' stroke-width='0.5' stroke='gray' d="
+                M440,315a230,120 0 1,0 460,0a230,120 0 1,0 -460,0
+                " />
+                <path id='path8' fill='none' stroke-width='0.5' stroke='gray' d="
+                M510,315a160,90 0 1,0 320,0a160,90 0 1,0 -320,0
+                " />
+                <!-- sun -->
+                <circle class="planet" cx="670" cy="315" r="70" fill="url(#sun)" />
+                <g class="details">
+                        <text x='720' y='220' font-size='20'>Sun</text>
+                        <polyline class="hut-body" points="670,280 720,220" stroke-width='1' fill="white" />
+                </g>
+                <use xlink:href="#venus" />
+                <!-- mercury -->
+                <g>
+                        <circle class="planet" r="5" fill="url(#mercury)" />
+                        <g class="details">
+                                <text x='10' y='-20' font-size='20'>Mercury</text>
+                                <text x='10' y='-5'>107,218 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='20s' repeatCount="indefinite">
+                                <mpath x:link href='#path8' />
+                        </animateMotion>
+                </g>
+                <!-- venus -->
+                <g>
+                        <circle class="planet" id='venus' r="7" fill="url(#venus)" />
+                        <g class="details">
+                                <text x='10' y='-20' font-size='20'>Venus</text>
+                                <text x='10' y='-5'>107,218 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='50s' repeatCount="indefinite">
+                                <mpath x:link href='#path7' />
+                        </animateMotion>
+                </g>
+                <!-- earth -->
+                <g>
+                        <circle class="planet" r="10" fill="url(#earth)" />
+                        <g class="details">
+                                <text x='20' y='-23' font-size='20'>Earth</text>
+                                <text x='20' y='-5'>107,218 km/h </text>
+                                <polyline points="0,0 20,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='100s' repeatCount="indefinite">
+                                <mpath x:link href='#path6' />
+                        </animateMotion>
+                </g>
+                <!-- mars -->
+                <g>
+                        <circle class="planet" r="6" fill="url(#mars)" />
+                        <g class="details">
+                                <text x='10' y='-28' font-size='20'>Mars</text>
+                                <text x='10' y='-13'>86,677 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='120s' repeatCount="indefinite">
+                                <mpath x:link href='#path5' />
+                        </animateMotion>
+                </g>
+                <!-- jupiter -->
+                <g>
+                        <circle class="planet" r="25" fill="url(#jupiter)" />
+                        <g class="details">
+                                <text x='30' y='-45' font-size='20'>Jupiter</text>
+                                <text x='30' y='-30'>47,0002 km/h </text>
+                                <polyline points="10,-10 30,-40" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='400s' repeatCount="indefinite">
+                                <mpath x:link href='#path4' />
+                        </animateMotion>
+                </g>
+                <!-- saturn -->
+                <g>
+                        <circle class="planet" r="15" fill="url(#saturn)" />
+                        <g class="details">
+                                <text x='10' y='-30' font-size='20'>Saturn</text>
+                                <text x='10' y='-15'>34,701 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='600s' repeatCount="indefinite">
+                                <mpath x:link href='#path3' />
+                        </animateMotion>
+                </g>
+                <!-- uranus -->
+                <g>
+                        <circle class="planet" r="10" fill="url(#uranus)" />
+                        <g class="details">
+                                <text x='10' y='-25' font-size='20'>Uranus</text>
+                                <text x='10' y='-10'>24,477 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='800s' repeatCount="indefinite">
+                                <mpath x:link href='#path2' />
+                        </animateMotion>
+                </g>
+                <!-- neptune -->
+                <g>
+                        <circle class="planet" r="10" fill="url(#neptune)" />
+                        <g class="details">
+                                <text x='10' y='-25' font-size='20'>Neptune</text>
+                                <text x='10' y='-10'>19,566 km/h </text>
+                                <polyline points="0,0 10,-20" stroke-width='1' fill="white" />
+                        </g>
+                        <animateMotion dur='1000s' repeatCount="indefinite">
+                                <mpath x:link href='#path1' />
+                        </animateMotion>
+                </g>
+        </svg>
+        <script src="./js/jquery.min.js"></script>
+        <script src="./js/script.js" type="text/javascript"></script>
+</body>
+
+</html>

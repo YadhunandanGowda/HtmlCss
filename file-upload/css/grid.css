@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.contr {
+    padding: 20px 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 80px;
+}
+
+.contr div {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.contr div:nth-child(odd) {
+    background-color: pink;
+}
+
+.contr div:nth-child(even) {
+    background-color: violet;
+}

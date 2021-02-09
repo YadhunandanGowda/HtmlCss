@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .content {
+            margin: 200px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        .thumbnail {
+            position: fixed;
+            border: 1px solid;
+            border-radius: 6px;
+            padding: 5px 10px;
+            background-color: rgba(0, 0, 0, 0.4);
+            top: 50%;
+            display: none;
+        }
+        
+        .thumbnail.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <p>img</p>
+        <img src="./image/sun-bg.png" alt="">
+    </div>
+    <div class="content">
+        <p>img</p>
+        <img src="./image/sun-bg.png" alt="">
+    </div>
+    <div class="thumbnail">
+        <p class="count">img</p>
+        <img src="./image/sun-bg.png" alt="">
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script>
+        let count = 1;
+        $('.content').on("mouseenter", function(e) {
+            $(".thumbnail").css("top", e.pageY);
+            $(".thumbnail").css("left", e.pageX);
+            $(".count").text(count);
+            $(".thumbnail").addClass("show");
+            count++;
+        }).on("mouseleave", function() {
+            $(".thumbnail").removeClass("show");
+        })
+    </script>
+</body>
+
+</html>

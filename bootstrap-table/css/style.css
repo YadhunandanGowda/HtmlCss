@@ -1,0 +1,950 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+}
+
+*:focus {
+    outline: 0 !important;
+}
+
+@font-face {
+    font-family: OpenSans-Regular;
+    src: url(../fonts/OpenSans-Regular.ttf);
+}
+
+
+body {
+    font-family: OpenSans-Regular;
+    background-image: url(../images/background-img-one.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+}
+
+.max-width {
+    max-width: 1440px;
+}
+
+/* common css starts */
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td span.data-info input[type=checkbox],
+.proposed-resources-landing .tbl-cntr tbody td span.data-info input[type=checkbox],
+.code-details-landing .details-section .search-result-section .tbl-cntr tbody td span.data-info input[type=checkbox] {
+    margin: 0px 10px !important;
+
+}
+
+.resource-search-landing .form-blk .chosen-container-multi .chosen-choices li.search-field,
+.resource-search-landing .form-blk .date-blk .datepicker input {
+    font-size: 16px;
+    color: #999;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle,
+.dropdown-item.active,
+.dropdown-item:active,
+.btn-secondary:hover,
+.btn-secondary,
+.page-item.active .page-link {
+    background-color: #ffa500;
+    border-color: #ffa500;
+    color: white;
+}
+
+.navbar {
+    justify-content: center;
+    margin-top: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar .navbar-nav {
+    flex-direction: row;
+}
+
+.navbar ul.navbar-nav li {
+    padding: 12px 35px;
+    background: #E6E6E6;
+    color: #707070;
+    margin-right: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul.navbar-nav li.active {
+    background: white;
+    font-weight: bold;
+    border-bottom: 8px solid orange;
+}
+
+
+.navbar ul.navbar-nav li:first-child {
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.navbar ul.navbar-nav li:last-child {
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: auto;
+}
+
+.code-details-landing .details-section .search-result-section .navbar ul.navbar-nav li:last-child {
+    cursor: pointer;
+}
+
+.tbl-cntr .individual-tbl {
+    display: none;
+}
+
+
+.tbl-cntr .individual-tbl.active {
+    display: block;
+    width: 100%;
+}
+
+.close-requisition-landing .table tbody tr td span.data-info a,
+.view-joiners-pipeline-landing .table tbody tr td span.data-info a {
+    text-decoration: none;
+    color: orange;
+}
+
+.resource-search-landing .form-blk .date-blk .datepicker,
+.close-requisition-landing .date-blk .datepicker {
+    flex-direction: row-reverse;
+}
+
+.resource-search-landing .form-blk .date-blk .datepicker .fa-calendar,
+.close-requisition-landing .date-blk .datepicker .fa-calendar {
+    font-size: 24px;
+    margin: 0px 10px;
+    position: relative;
+    top: 7px;
+}
+
+.close-requisition-landing .date-blk .datepicker label {
+    align-self: center;
+    margin-bottom: 0px;
+}
+
+.resource-search-landing .form-blk .form-group input,
+.resource-search-landing .form-blk .form-group .bootstrap-select,
+.bootstrap-select>.dropdown-toggle.bs-placeholder,
+.resource-search-landing .form-blk .date-blk .datepicker input,
+.close-requisition-landing .date-blk .datepicker input,
+.bootstrap-select>.dropdown-toggle {
+    outline: none !important;
+    border-radius: 1.25rem;
+}
+
+.table tbody tr td.req-no,
+.table tbody tr td.view-resume {
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active:active,
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+    color: #fff;
+    background-color: orange;
+    border-color: orange;
+}
+
+.bootstrap-table .fixed-table-container .table thead th .th-inner {
+    padding: 5px 10px;
+}
+
+.resource-search-landing,
+.open-requisition-landing,
+.close-requisition-landing,
+.proposed-resources-landing,
+.view-joiners-pipeline-landing,
+.ceg-main-landing {
+    margin: 75px auto 20px;
+}
+
+
+.table tbody tr td.view-resume {
+    background-color: rgba(255, 255, 255, 0) !important;
+}
+
+.table tbody tr td.view-resume a {
+    color: white;
+    background-color: orange;
+    min-width: 115px;
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: 14px;
+}
+
+.table th,
+.table td {
+    max-width: 250px;
+    min-width: 150px;
+    word-break: break-word;
+}
+
+.code-details-landing .details-section .search-result-section .tbl-cntr .table td:first-child,
+.code-details-landing .details-section .search-result-section .tbl-cntr .table th:first-child,
+.code-details-landing .details-section .proposed-resources-section .tbl-cntr .table td:first-child,
+.code-details-landing .details-section .proposed-resources-section .tbl-cntr .table th:first-child,
+.proposed-resources-landing .tbl-cntr .table td:first-child,
+.proposed-resources-landing .tbl-cntr .table th:first-child  {
+    min-width: 80px;
+    text-align: center;
+}
+
+.bootstrap-table .fixed-table-toolbar .search,
+.bootstrap-table .fixed-table-toolbar .columns {
+    margin: 0px 7px 5px 0px;
+}
+
+.bootstrap-table .fixed-table-toolbar .search .form-control,
+.bootstrap-table .fixed-table-toolbar .columns button,
+.bootstrap-table .fixed-table-pagination>.pagination-detail .page-list .btn-group button {
+    height: auto;
+    padding: 2px .75rem;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.bootstrap-table .fixed-table-toolbar .columns button,
+.bootstrap-table .fixed-table-pagination>.pagination-detail .page-list .btn-group button {
+    padding: 5px .75rem;
+}
+
+.bootstrap-table .fixed-table-pagination>.pagination-detail .page-list .btn-group button {
+    padding: 5px .75rem;
+    font-size: 16px;
+}
+
+.bootstrap-table .fixed-table-pagination>.pagination ul.pagination a {
+    padding: 2px 10px;
+}
+
+.tbl-cntr table td textarea {
+    max-width: 100%;
+    max-height: 100px;
+    height: 30px;
+    padding: 0px 5px;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.tbl-cntr table td.txt-bx span.data-info{
+    display: flex;
+}
+
+
+table tbody {
+    font-size: 15px;
+}
+
+
+.tbl-cntr {
+    margin: 0px 50px;
+}
+
+.tbl-cntr tbody tr {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.tbl-cntr tbody td {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tbl-cntr tbody td span.header-info {
+    display: none;
+}
+
+
+.table::-webkit-scrollbar {
+    height: 5px;
+}
+
+.table::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px 0px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.table::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border: 5px white;
+    border-radius: 3px;
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 5px 0px;
+    border: none;
+    padding-bottom: 10px;
+}
+
+.table tbody tr:first-child td {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.table tbody tr:last-child td {
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.table thead th {
+    margin: 2px 1px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: none;
+}
+
+.table thead:after {
+    content: "-";
+    display: block;
+    height: 8px;
+    line-height: 0px;
+    color: transparent;
+}
+
+
+
+.tbl-cntr .table .thead-light th {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    ;
+    border: none;
+    vertical-align: middle;
+    border-radius: 7px;
+}
+
+
+.table tbody tr td select {
+    min-width: 150px;
+    padding: 5px;
+    font-size: 14px;
+    height: calc(1.5em + .5rem + 2px);
+    transition: all 0.5s;
+}
+
+.tbl-cntr table td .form-control:disabled, .form-control[readonly] {
+    background-color: transparent;
+    opacity: 1;
+    color: white;
+    border: none;
+    -webkit-appearance: none;
+}
+
+.tbl-cntr table td textarea:disabled {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+/* common css ends */
+
+/* home page css starts */
+
+.landing-page .cntr-cont {
+    margin: 150px auto 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: max-content;
+    align-items: center;
+}
+
+.landing-page .cntr-cont h1 {
+    position: relative;
+    color: white;
+    font-size: 45px;
+}
+
+.landing-page .cntr-cont h1::before,
+.landing-page .cntr-cont h1::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 30px;
+    width: 30px;
+}
+
+.landing-page .cntr-cont h1::before {
+    background-image: url(../images/before-title.png);
+    left: -50px;
+}
+
+.landing-page .cntr-cont h1::after {
+    background-image: url(../images/after-title.png);
+    right: -50px;
+    top: 22px;
+}
+
+.landing-page .cntr-cont img {
+    margin-top: 35px;
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.landing-page .cntr-cont img:hover {
+    transform: scale(1.1);
+}
+
+.landing-page .cntr-cont .options {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.landing-page .cntr-cont .options a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 100px;
+    margin-top: 10px;
+    border: 1px solid white;
+    border-radius: 55px;
+    transition: all 500ms ease-in-out;
+}
+
+.landing-page .cntr-cont .options a:hover {
+    transform: scale(1.1);
+    background: orange;
+}
+
+
+/* home page css ends */
+
+
+/* resource page css starts */
+
+.resource-search-landing .form-blk {
+    position: relative;
+    margin: 10px;
+    height: auto;
+    max-height: 0px;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 9;
+}
+
+.resource-search-landing .form-blk.show {
+    margin: 20px 50px 10px;
+    opacity: 1;
+    transform: scale(1);
+    max-height: 800px;
+    transition: all 0.7s ease-in-out;
+}
+
+.resource-search-landing .form-blk .date-blk label {
+    color: white;
+}
+
+.resource-search-landing~.datepicker-dropdown {
+    transform: translate(3rem, 4em);
+}
+
+.resource-search-landing .form-blk .form-control:focus {
+    box-shadow: none;
+}
+
+.resource-search-landing .input-group>.custom-select:not(:last-child),
+.resource-search-landing .input-group>.form-control:not(:last-child) {
+    border-top-right-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+}
+
+.resource-search-landing .form-blk .col-md-4 {
+    padding: 0px 25px;
+}
+
+
+.resource-search-landing .form-blk .radio-blk .custom-control-input:checked~.custom-control-label::before {
+    background-color: white;
+    border-color: white;
+}
+
+.resource-search-landing .form-blk .radio-blk .custom-radio .custom-control-input~.custom-control-label::after {
+    background-image: unset;
+}
+
+.resource-search-landing .form-blk .radio-blk .custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='4' fill='%230000ff'/%3e%3c/svg%3e");
+}
+
+.resource-search-landing .form-blk .form-group label {
+    color: white;
+}
+
+
+.resource-search-landing .form-blk .search-blk {
+    margin-top: 45px;
+}
+
+
+.resource-search-landing .form-blk .search-blk .submit,
+.resource-search-landing .export {
+    background: orange;
+    border-radius: 50px;
+    padding: 10px 50px;
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.resource-search-landing .export {
+    background-color: #4CD964;
+}
+
+
+.resource-search-landing .form-blk .search-blk .submit:hover,
+.resource-search-landing .export:hover {
+    transform: scale(1.1);
+}
+
+.resource-search-landing .validate-error {
+    padding-left: 15px;
+    margin-top: 5px;
+    color: red;
+    display: block;
+    font-size: 12px;
+}
+
+.resource-search-landing .form-blk .form-group label.primary-label::after,
+.resource-search-landing .form-blk .form-group label.secondary-label::after {
+    content: '*';
+    color: red;
+    position: relative;
+    left: 5px;
+    top: -2px;
+}
+
+.resource-search-landing .form-cls-btn {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.resource-search-landing .form-cls-btn::before {
+    content: '';
+    position: absolute;
+    left: 65%;
+    width: 2px;
+    top: 15%;
+    transform: rotate(135deg);
+    height: 50%;
+    background: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.resource-search-landing .form-cls-btn::after {
+    content: '';
+    position: absolute;
+    left: 30%;
+    width: 2px;
+    top: 15%;
+    transform: rotate(-135deg);
+    height: 50%;
+    background: white;
+    transition: all 0.5s ease-in-out;
+}
+
+
+.resource-search-landing .form-cls-btn.show::before {
+    transform: rotate(45deg);
+}
+
+.resource-search-landing .form-cls-btn.show::after {
+    transform: rotate(-45deg);
+}
+
+.resource-search-landing .form-blk .chosen-container-multi .chosen-choices {
+    border-radius: 1.25rem;
+    padding: .275rem .75rem;
+    font-size: 1rem;
+}
+
+.resource-search-landing .form-blk .chosen-container {
+    width: 100% !important;
+}
+
+.resource-search-landing .dropdown .dropdown-menu {
+    max-height: 260px !important;
+}
+
+.resource-search-landing .chosen-container .chosen-results li.active-result {
+    font-size: 16px;
+    padding: 10px 6px;
+}
+
+.resource-search-landing .dropdown .dropdown-menu .dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* resource page css ends */
+
+
+/* open requisition page css starts */
+
+.open-requisition-landing .table tbody tr td span.data-info a {
+    text-decoration: none;
+    color: orange;
+}
+
+/* open requisition page css ends */
+
+
+/* Close requisition page css starts */
+
+.close-requisition-landing .navbar {
+    margin-top: 0px;
+}
+
+.close-requisition-landing .date-blk {
+    margin: 0px 50px;
+}
+
+.close-requisition-landing~.datepicker-dropdown {
+    transform: translate(5rem, 4em);
+}
+
+
+/* close requisition page css ends */
+
+
+
+/* code details page css starts */
+
+.code-details-landing .options {
+    width: 100%;
+    padding: 33px 0px;
+    z-index: 9;
+}
+
+.code-details-landing .options ul li {
+    display: inline-block;
+    position: relative;
+    font-size: 20px;
+}
+
+.code-details-landing .options ul li a {
+    color: rgba(255, 255, 255, 0.6);
+    padding: 8px 16px;
+    margin: 0 50px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.code-details-landing .options ul li.active a {
+    background: orange;
+    color: white;
+    border: 2px solid white;
+}
+
+.code-details-landing .options ul li:before {
+    content: attr(data-name);
+    color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -38px;
+    width: max-content;
+    min-width: 160px;
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-details-landing .options ul li:after {
+    content: '';
+    width: 107px;
+    background: white;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 96px;
+    transform: translateY(-50%);
+}
+
+
+
+.code-details-landing .options ul li.active:before {
+    color: white;
+}
+
+.code-details-landing .options ul li.active:after {
+    background: white
+}
+
+.code-details-landing .options ul li:last-child:after {
+    display: none;
+}
+
+.code-details-landing .details-section {
+    margin: 65px auto 20px;
+}
+
+.code-details-landing .details-section .basic-details-section,
+.code-details-landing .details-section .job-details-section,
+.code-details-landing .details-section .primary-skill-section,
+.code-details-landing .details-section .secondary-skill-section {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 20px 100px;
+    margin: 0px 100px;
+}
+
+.code-details-landing .details-section .child-details {
+    display: none;
+
+}
+
+.code-details-landing .details-section .child-details.active {
+    display: block;
+}
+
+.code-details-landing .details-section .basic-details-section .title,
+.code-details-landing .details-section .job-details-section .title {
+    font-size: 26px;
+    padding-bottom: 20px;
+}
+
+.code-details-landing .details-section .basic-details-section table,
+.code-details-landing .details-section .job-details-section table {
+    width: 100%;
+}
+
+.code-details-landing .details-section .basic-details-section table tr td {
+    padding-bottom: 10px;
+    vertical-align: top;
+}
+
+
+.code-details-landing .details-section .basic-details-section table tr td:nth-child(odd) {
+    width: 20%;
+    font-weight: 700;
+}
+
+
+.code-details-landing .details-section .basic-details-section table tr td:nth-child(even) {
+    width: 30%;
+    padding-right: 20px;
+    color: #fbb537;
+}
+
+
+.code-details-landing .details-section .basic-details-section table tr td:nth-child(3) {
+    padding-left: 40px;
+}
+
+.code-details-landing .details-section .job-details-section table tr td {
+    padding-bottom: 10px;
+    width: 50%;
+    vertical-align: top;
+}
+
+.code-details-landing .details-section .job-details-section table tr td:nth-child(even) {
+    color: #fbb537;
+}
+
+
+.code-details-landing .details-section .search-result-section .navbar {
+    margin-top: 15px;
+}
+
+.code-details-landing .details-section .job-details-section .table tr td.job-description,
+.code-details-landing .details-section .primary-skill-section p,
+.code-details-landing .details-section .secondary-skill-section p {
+    color: black;
+    background: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+    min-height: 35px;
+}
+
+.code-details-landing .details-section .search-result-section .sbmt-btns.show button {
+    transition: all 0.5s ease-in-out;
+}
+
+.code-details-landing .details-section .search-result-section .submit-to-SAP,
+.code-details-landing .details-section .search-result-section .export-btn,
+.code-details-landing .details-section .search-result-section .submit-to-PM-btn {
+    background: orange;
+    border-radius: 50px;
+    padding: 10px 50px;
+    color: white;
+    margin: 10px;
+}
+
+.code-details-landing .details-section .search-result-section .sbmt-btns.show .submit-to-SAP:hover,
+.code-details-landing .details-section .search-result-section .sbmt-btns.show .export-btn:hover,
+.code-details-landing .details-section .search-result-section .sbmt-btns.show .submit-to-PM-btn:hover {
+    transform: scale(1.1);
+}
+
+.code-details-landing .details-section .search-result-section .submit-to-SAP {
+    background-color: #00C4FF;
+}
+
+.code-details-landing .details-section .search-result-section .export-btn {
+    background-color: #4CD964;
+}
+
+/* code details page css ends */
+
+
+/* Proposed resources Page CSS Starts */
+
+.proposed-resources-landing .submit-to-SAP, .code-details-landing .details-section .proposed-resources-section .submit-to-SAP {
+    background: #4CD964;
+    border-radius: 50px;
+    padding: 10px 50px;
+    color: white;
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.proposed-resources-landing .submit-to-SAP:hover, .code-details-landing .details-section .proposed-resources-section .submit-to-SAP :hover {
+    transform: scale(1.1);
+}
+
+
+/* .proposed-resources-landing .tbl-cntr tbody td span.accept {
+    display: none;
+    position: absolute;
+    left: 0px;
+} */
+
+.proposed-resources-landing .tbl-cntr tbody td:first-child span img,  .code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td:first-child span img{
+    width: 22px;
+    margin: 0px 5px;
+}
+
+.proposed-resources-landing .tbl-cntr tbody td.edit-sec span, .code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td.edit-sec span {
+    display: none;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.proposed-resources-landing .tbl-cntr tbody td:first-child span:hover, .code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td:first-child span:hover {
+    transform: scale(1.1);
+}
+
+.proposed-resources-landing .tbl-cntr tbody td span.show, .code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td span.show {
+    display: inline;
+}
+
+.proposed-resources-landing .tbl-cntr tbody td .ui-select span.form-control, .code-details-landing .details-section .proposed-resources-section .tbl-cntr tbody td .ui-select span.form-control {
+    display: none;
+}
+
+/* Proposed resources Page CSS Ends */
+
+/* View Joiners Pipeline Page CSS Starts */
+
+.view-joiners-pipeline-landing .calendar {
+    margin: 20px 50px 10px;
+}
+
+.view-joiners-pipeline-landing .calendar .month .completeWeek {
+    margin-top: 20px;
+}
+
+.view-joiners-pipeline-landing .calendar .month .completeWeek .week .alldays,
+.view-joiners-pipeline-landing .calendar .month .completeWeek,
+.view-joiners-pipeline-landing .calendar .month .completeWeek p {
+    display: flex;
+    justify-content: space-around;
+}
+
+.view-joiners-pipeline-landing .calendar .month h3 {
+    font-size: 24px;
+}
+
+.view-joiners-pipeline-landing .calendar .month .completeWeek .week h4 {
+    font-size: 18px;
+}
+
+.view-joiners-pipeline-landing .calendar .month .completeWeek p {
+    flex-direction: column;
+    padding: 0px 5px;
+    margin: 0px 5px;
+    background: rgba(158, 154, 154, 0.2);
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.view-joiners-pipeline-landing .calendar .slick-prev {
+    background-image: url(../images/prev.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.view-joiners-pipeline-landing .calendar .slick-prev:before {
+    content: '';
+}
+
+.view-joiners-pipeline-landing .calendar .slick-next {
+    background-image: url(../images/next.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 30px;
+}
+
+.view-joiners-pipeline-landing .calendar .slick-next.slick-disabled,
+.view-joiners-pipeline-landing .calendar .slick-prev.slick-disabled {
+    opacity: 0.3;
+    cursor: auto;
+}
+
+.view-joiners-pipeline-landing .calendar .slick-next:before {
+    content: '';
+}
+
+/* View Joiners Pipeline Page CSS Ends */
+
+
+/* CEG Page CSS Starts */
+
+.ceg-main-landing .navbar ul.navbar-nav li:last-child {
+    cursor: pointer;
+}
+
+.ceg-main-landing .tbl-cntr {
+    margin-top: 10px;
+}
+
+/* CEG Page CSS Ends */

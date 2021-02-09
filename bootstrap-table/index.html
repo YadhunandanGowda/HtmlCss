@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./fonts/FontAwesome.otf">
+    <style>
+        body {
+            margin: 20px 50px;
+        }
+    </style>
+</head>
+<body>
+        <table id="tech-stack">
+                <thead >
+                    <tr>
+                        <th data-sortable="true">Primary Skill</th>
+                        <th>Secondary Skill</th>
+                        <th>No.of Reqs</th>
+                        <th>Location</th>
+                        <th>Deployment site</th>
+                        <th>Hire type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <script src="./js/jquery.min.js"></script>
+            <script src="https://unpkg.com/bootstrap-table@1.15.5/dist/bootstrap-table.min.js"></script>
+            <script>
+
+            $(document).ready(function(){
+                for (i=0; i<100; i++){
+                    $("#tech-stack tbody").append("<tr> <td><span class='header-info'>Primary Skill</span> <span class='data-info'>ovfdvfds</span><span class='view-more'></span> </td> <td><span class='header-info'>Secondary Skill</span><span class='data-info'>Ottdsfsao</span> </td> <td class='req-no'><span class='header-info'>No.of Reqs</span><span class='data-info'><a href='javascript:void(0)'>100</a></span></td> <td><span class='header-info'>Location</span><span class='data-info'>afa@mdo</span></td> <td><span class='header-info'>Deployment site</span><span class='data-info'>Madsdark</span> </td> <td><span class='header-info'>Hire type</span><span class='data-info'>Otsadaato</span></td> </tr>");
+                }
+                $('#tech-stack').bootstrapTable({
+                    sortStable: true,
+                    search: true,
+                    pagination: true
+                });
+            })
+            </script>
+</body>
+</html>

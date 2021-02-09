@@ -1,0 +1,18 @@
+svg {
+    border: 2px solid black;
+    background-image:url('../image/download.png'), url('../image/twinkling-stars-in-the-night-sky-loop_rpkmj9ea_thumbnail-full01.png');
+    background-size: cover, cover;
+    background-position:
+    center center, /* this positions the first image */
+    bottom left; /* this positions the second image */
+  background-repeat: no-repeat, no-repeat;
+}
+
+text {
+    width: 50px;
+    height: 30px;
+}
+
+.details {
+    fill:   transparent;
+}

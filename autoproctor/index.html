@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    
+        <link rel="shortcut icon" href="https://www.autoproctor.co//static/img/favicon.png" />
+        
+            <script
+                    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
+                    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
+                    crossorigin="anonymous"
+            ></script>
+        
+
+        <title>AutoProctor: Automated Online Test Proctoring</title>
+
+        
+            <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+          
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://www.autoproctor.co/static/style/style.css?v=163" />
+    <link rel="stylesheet" href="./custom.css" />
+
+    <style>
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        
+            #nav-logo {
+                left: 0;
+                margin-left: 152px;
+            }
+        
+        
+        .sidenav li > a:hover {
+            background-color: transparent !important;
+        }
+    </style>
+
+
+
+    <script>
+        var gaIsAvailable = false;
+    </script>
+    
+        <script type="text/javascript">
+            gaIsAvailable = true;
+            var gaID = "UA-165591693-1";
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            
+            ga('create', gaID, 'auto');
+            ga('send', 'pageview');
+        </script>
+    
+</head>
+
+<body>
+
+
+    <ul class="dropdown-content" id="account-dropdown">
+        
+        <li><a href="/account/logout">Logout</a></li>
+    </ul>
+
+    <div class="navbar-fixed" id="navbar-container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo" id="nav-logo">
+                    <img src="https://www.autoproctor.co/static/img/logo-blue.png" />
+                </a>
+                
+                    <a href="#" id="mobile-demo" data-target="slide-out" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+                
+                <div id="nav-right-half">
+                    <ul class="right hide-on-med-and-down">
+                        <li class="hide-on-med-and-down">
+                            <a href="https://blog.autoproctor.co/how-to-use-autoproctor/" target="_blank">
+                                How It Works
+                            </a>
+                        </li>
+                        <li><a id="pricing" href="/pricing">Pricing</a></li>
+                        <li><a id="faqs" href="/faqs">FAQs</a></li>
+                        <li><a href="https://blog.autoproctor.co/">Blog</a></li>
+                        
+                            <li><a style="float: right" href="/account/login/">Login</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    
+        <ul id="slide-out" class="sidenav">
+            <li class="mob-sidenav-header">
+                <button>
+                    <i class="material-icons sidenav-close close-icon">close</i>
+                </button>
+                <img id="logo-menu" src="https://www.autoproctor.co/static/img/logo-blue.png"/>
+            </li>
+            
+                <li class="mob-nav-login-btn">
+                    <a href="/account/login/">
+                        <svg viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.25 3.25L6.2 4.3L8.15 6.25H0.5V7.75H8.15L6.2 9.7L7.25 10.75L11 7L7.25 3.25ZM14 12.25H8V13.75H14C14.825 13.75 15.5 13.075 15.5 12.25V1.75C15.5 0.925 14.825 0.25 14 0.25H8V1.75H14V12.25Z" fill="#FBFBFB"/>
+                        </svg>
+                        Login
+                    </a>
+                </li>
+            
+            
+            <li>
+                <a href="https://blog.autoproctor.co/how-to-use-autoproctor/" target="_blank">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.5 3.5V2H6.5V3.5H9.5ZM2 5V13.25H14V5H2ZM14 3.5C14.8325 3.5 15.5 4.1675 15.5 5V13.25C15.5 14.0825 14.8325 14.75 14 14.75H2C1.1675 14.75 0.5 14.0825 0.5 13.25L0.5075 5C0.5075 4.1675 1.1675 3.5 2 3.5H5V2C5 1.1675 5.6675 0.5 6.5 0.5H9.5C10.3325 0.5 11 1.1675 11 2V3.5H14Z" fill="#FBFBFB"/>
+                    </svg>
+                    How it works
+                </a>
+            </li>
+            <li>
+                <a href="/pricing">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.0575 7.685L8.3075 0.935C8.0375 0.665 7.6625 0.5 7.25 0.5H2C1.175 0.5 0.5 1.175 0.5 2V7.25C0.5 7.6625 0.665 8.0375 0.9425 8.315L7.6925 15.065C7.9625 15.335 8.3375 15.5 8.75 15.5C9.1625 15.5 9.5375 15.335 9.8075 15.0575L15.0575 9.8075C15.335 9.5375 15.5 9.1625 15.5 8.75C15.5 8.3375 15.3275 7.955 15.0575 7.685ZM8.75 14.0075L2 7.25V2H7.25V1.9925L14 8.7425L8.75 14.0075Z" fill="#FBFBFB"/>
+                        <path d="M3.875 5C4.49632 5 5 4.49632 5 3.875C5 3.25368 4.49632 2.75 3.875 2.75C3.25368 2.75 2.75 3.25368 2.75 3.875C2.75 4.49632 3.25368 5 3.875 5Z" fill="#FBFBFB"/>
+                    </svg>
+                    Pricing
+                </a>
+            </li>
+            <li>
+                <a href="/faqs">
+                    <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.24463 12.511H8.74463V11.011H7.24463V12.511ZM7.99463 0.510986C3.85463 0.510986 0.494629 3.87099 0.494629 8.01099C0.494629 12.151 3.85463 15.511 7.99463 15.511C12.1346 15.511 15.4946 12.151 15.4946 8.01099C15.4946 3.87099 12.1346 0.510986 7.99463 0.510986ZM7.99463 14.011C4.68713 14.011 1.99463 11.3185 1.99463 8.01099C1.99463 4.70349 4.68713 2.01099 7.99463 2.01099C11.3021 2.01099 13.9946 4.70349 13.9946 8.01099C13.9946 11.3185 11.3021 14.011 7.99463 14.011ZM7.99463 3.51099C6.33713 3.51099 4.99463 4.85349 4.99463 6.51099H6.49463C6.49463 5.68599 7.16963 5.01099 7.99463 5.01099C8.81963 5.01099 9.49463 5.68599 9.49463 6.51099C9.49463 8.01099 7.24463 7.82349 7.24463 10.261H8.74463C8.74463 8.57349 10.9946 8.38599 10.9946 6.51099C10.9946 4.85349 9.65213 3.51099 7.99463 3.51099Z" fill="#FBFBFB"/>
+                    </svg>
+                    FAQs
+                </a>
+            </li>
+            <li>
+                <a href="https://blog.autoproctor.co/">
+                    <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.25 1.75V12.25H1.75V1.75H12.25ZM12.25 0.25H1.75C0.925 0.25 0.25 0.925 0.25 1.75V12.25C0.25 13.075 0.925 13.75 1.75 13.75H12.25C13.075 13.75 13.75 13.075 13.75 12.25V1.75C13.75 0.925 13.075 0.25 12.25 0.25Z" fill="#FBFBFB"/>
+                        <path d="M8.5 10.75H3.25V9.25H8.5V10.75ZM10.75 7.75H3.25V6.25H10.75V7.75ZM10.75 4.75H3.25V3.25H10.75V4.75Z" fill="#FBFBFB"/>
+                    </svg>
+                    Blog
+                </a>
+            </li>
+            
+            
+        </ul>
+
+     
+    
+
+
+<div class="content">
+
+    <div class="container" id="homepage-container">
+        <div class="row" id="top-row">
+            <div class="col s12 m7 l6 banner-content">
+                <div class="top-row-description">
+                    <div id="main-description">Timed & <br>
+                        <span class="homepage-landing-text-blue">Automatically</span> Proctored <br> Online Tests
+                    </div>
+                    <div id="homepage-landing-subtext">
+                        Question Set to Monitored Exam<br> 
+                        in just One Click with 
+                        <div class="google-text">
+                            <span>G</span>
+                            <span>o</span> 
+                            <span>o</span> 
+                            <span>g</span> 
+                            <span>l</span>
+                            <span>e</span>  
+                        </div>
+                        Forms!
+                    </div>
+
+                    <a href="https://www.autoproctor.co/tests/start-test/GFICZZZA">
+                        <button type="button" class="homepage-cta-btns" id="homepage-cta-btns--demo">
+                            <span class="homepage-cta-btns__text" id="homepage-cta-btns__text--demo">
+                                Try Now
+                            </span>
+                        </button>
+                    </a>
+
+                    <a href="https://gsuite.google.com/marketplace/app/autoproctor/691377974459" target="_blank">
+                        <button type="button" class="homepage-cta-btns" id="homepage-cta-btns--install" >
+                            <span class="homepage-cta-btns__text" id="homepage-cta-btns__text--install">
+                                Install For Free
+                            </span>
+                        </button>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="col s12 m5 l6 main-image-container-mobile">
+                <img id="main-image" src="https://autoproctor.s3.ap-south-1.amazonaws.com/static/img/static-pages/homepage-landing-img.svg"/>
+            </div>
+            <div class="col s12 m5 l6 main-image-container-desktop">
+                <img id="main-image" src="https://autoproctor.s3.ap-south-1.amazonaws.com/static/img/static-pages/homepage-landing-img.svg" />
+            </div>
+        </div>
+    </div>
+    <div class="separator metrics">
+        <div class="container">
+            <div class="row">
+                <div class="col m4 s12 slide-left">
+                    <div class="icon-wrapper"><span class="material-icons">system_update</span></div>
+                    <p>2.4 Million +</p><hr>
+                    <p>Installs</p>
+                </div>
+                <div class="col m4 s12 slide-left">
+                    <div class="icon-wrapper"><span class="material-icons">account_balance</span></div>
+                    <p>10,000+</p><hr>
+                    <p>Organisations</p>
+                </div>
+                <div class="col m4 s12 slide-left">
+                    <div class="icon-wrapper"><span class="material-icons">description</span></div>
+                    <p>170,000+</p><hr>
+                    <p>Tests</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="homepage-container-level-2">
+
+        <div id="video-section">
+            <h4 class="center-align">How it Works</h4><br>
+            <div class="vidSec">
+                <div class="video-wrapper">
+                    <div class="video-content">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/LoAqvp5rkEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="device-logo-icon"></div>
+                </div>
+                <div class="video-stand"></div>
+                <div class="video-stand-base"></div>
+            </div>
+        </div>
+
+        <div class="row" id="feature-set">
+            <h4 class="center-align">Features</h4>
+            <div class="feature-set__card-container">
+                <div class="col s12 m12 l4 slide-right">
+                    <div class="feat-box">
+                        <div class="card-image feature-set__image-container">
+                            <img src="https://autoproctor.s3.ap-south-1.amazonaws.com/static/img/icons/timer-icon.png" class="feature-set__image-container"/>
+                            <span class="card-title feature-set__image-title">Timer</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content feature-set__details-container">
+                            <p>Start and End Times. Test Duration after which Test Auto-Closes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4 slide-right">
+                    <div class="feat-box">
+                        <div class="card-image feature-set__image-container">
+                            <img src="https://autoproctor.s3.ap-south-1.amazonaws.com/static/img/icons/monitor-icon.png" class="feature-set__image-container" />
+                            <span class="card-title feature-set__image-title" >Monitor</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content feature-set__details-container">
+                        <p>Monitoring of Test Taker's Environment to Prevent Malpractice</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l4 slide-right">
+                    <div class="feat-box">
+                        <div class="card-image feature-set__image-container">
+                            <img src="https://autoproctor.s3.ap-south-1.amazonaws.com/static/img/icons/report-icon.png" class="feature-set__image-container" />
+                            <span class="card-title feature-set__image-title">Reports</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content feature-set__details-container">
+                            <p>Get a Trust Score that informs you of the overall Test Integrity</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="getting-started">
+            <h4 class="center-align">Get Started</h4>
+            <p id="how-it-works__description">AutoProctor uses Artificial Intelligence to prevent and gather evidence of malpractice during an online test. Highly configurable, you decide if and what sources (like audio, video, etc) AutoProctor tracks and stores.</p>
+            <div class="getting-started__card-container">
+                <div class="col s12 m12 l3 slide-up">
+                    <div class="gs-wrapper">
+                        <div class="card-image feature-set__image-container">
+                            <span class="material-icons">cloud_download</span>
+                            <span class="card-title getting-started__image-title">1</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content getting-started__details-container">
+                            <p>Install AutoProctor from the <a href="https://gsuite.google.com/marketplace/app/autoproctor/691377974459" target="_blank">Google Suite Marketplace</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l3 slide-up">
+                    <div class="gs-wrapper">
+                        <div class="card-image feature-set__image-container">
+                            <span class="material-icons">phonelink_setup</span>
+                            <span class="card-title getting-started__image-title">2</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content getting-started__details-container">
+                        <p>Enable the Add-On and Configure the Timer and Proctor Settings</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m12 l3 slide-up">
+                    <div class="gs-wrapper">
+                        <div class="card-image feature-set__image-container">
+                            <span class="material-icons">share</span>
+                            <span class="card-title getting-started__image-title">3</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content getting-started__details-container">
+                            <p>Share the test link via e-mail, WhatsApp, Google Classrooms, etc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s12 m12 l3 slide-up">
+                    <div class="gs-wrapper end">
+                        <div class="card-image feature-set__image-container">
+                            <span class="material-icons">addchart</span>
+                            <span class="card-title getting-started__image-title">4</span>
+                        </div>
+                        <hr/>
+                        <div class="card-content getting-started__details-container">
+                            <p>Get reports of how the user took the test, along with evidence of violations</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+
+
+    <footer>
+           
+        <div>
+            <a href="https://autoproctor.freshdesk.com/" target="_blank">Contact Us</a>
+        </div>
+    
+
+        <div>
+            <a href="/terms-privacy">Terms and Conditions</a> | <a href="/data-storage">How We Store Your Data</a> |
+            <a href="/terms-privacy">Privacy Policies and Cookies</a>
+        </div>
+        <div></div>
+        <div class="copyright">2021, AutoProctor. All rights reserved.</div>
+    </footer>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.21.1/sweetalert2.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://www.autoproctor.co//static/scripts/common-functions.js?v=f2p"></script>
+
+    <script>
+        var maxSentryEvents = 6;
+        var numberOfCurrentSentryEvents = 0;
+
+        
+            Sentry.init({ dsn: "https://58dfa194c21a4a6c86f18c8ac9a4f347@o288839.ingest.sentry.io/5254219", beforeSend(event) {
+                numberOfCurrentSentryEvents++;
+                if (numberOfCurrentSentryEvents <= maxSentryEvents) {
+                    return event;
+                } else {
+                    return null;
+                }
+            }, });
+            
+        
+
+
+        
+
+            function initFreshChat() {
+                
+                    window.fcWidget.init({
+                        token: "1caea5e7-72dd-445f-ac89-7bfb68e30935",
+                        host: "https://wchat.in.freshchat.com"
+                    });
+
+                
+
+            }
+
+            function initialize(i,t){var e;i.getElementById(t)?initFreshChat():((e=i.createElement("script")).id=t,e.async=!0,e.src="https://wchat.in.freshchat.com/js/widget.js",e.onload=initFreshChat,i.head.appendChild(e))}function initiateCall(){initialize(document,"freshchat-js-sdk")}window.addEventListener?window.addEventListener("load",initiateCall,!1):window.attachEvent("load",initiateCall,!1);
+
+        
+
+
+        $(document).ready(function() {
+            $('.collapsible').collapsible();
+
+            var pathname = window.location.pathname;
+
+            if (pathname.indexOf('faqs') !== -1) {
+                document.getElementById('faqs') && document.getElementById('faqs').classList.add('active-nav-menu');
+            } else if (pathname.indexOf('pricing') !== -1) {
+                document.getElementById('pricing') && document.getElementById('pricing').classList.add('active-nav-menu');
+            } else {
+                document.getElementById('faqs') && document.getElementById('faqs').classList.remove('active-nav-menu');
+                document.getElementById('pricing') && document.getElementById('pricing').classList.remove('active-nav-menu');
+            }
+
+            try {
+                $('.sidenav').sidenav();
+                $('.modal').modal();
+                $(".dropdown-trigger").dropdown();
+                
+
+            } catch (e) {
+                alert("Some error loading the page. Try loading it again.");
+            }
+
+            
+                
+            
+        })
+    </script>
+
+
+<script>
+    var slideLeft = {
+    distance: '150%',
+    origin: 'right',
+    opacity: 0.5,
+    duration: 1500,
+    delay: 100,
+    interval: 300
+};
+    var slideRight = {
+    distance: '150%',
+    origin: 'left',
+    opacity: 0.5,
+    duration: 2000,
+    delay: 200,
+    interval: 500
+};
+    var slideUp = {
+    distance: '150%',
+    origin: 'bottom',
+    opacity: 0.5,
+    duration: 2000,
+    delay: 200,
+    interval: 300
+};
+    var video = {
+    distance: '150%',
+    origin: 'left',
+    opacity: 0.5,
+    duration: 2000,
+    delay: 300
+};
+
+
+ScrollReveal().reveal(' .banner-content', slideRight);
+ScrollReveal().reveal('.slide-right , .slide-left , .main-image-container-desktop', slideLeft);
+ScrollReveal().reveal('.vidSec', video);
+ScrollReveal().reveal('.slide-up', slideUp);
+</script>
+
+</body>
+</html>

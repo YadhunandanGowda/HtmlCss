@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/mricode.pagination.css">
+    <style>
+        .pagition {
+            position: absolute;
+            left: 50%;
+            top: 90%;
+            transform: translate(-50%, -90%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pagition">
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/mricode.pagination.js"></script>
+    <script>
+        $(document).on('ready', function () {
+            $('.pagition').pagination({
+                pageIndex: 0,
+                pageSize: 10,
+                total: 100
+            }).on("pageClicked", function (event, data) {
+                alert(data.pageIndex)
+            });
+
+            //reinitialization
+
+            // if ($(".pagination").pagination()) {
+            //   $(".pagination").pagination('destroy');
+            // }
+            // $('.pagination').pagination({
+            //   pageIndex: 0,
+            //   pageSize: 20,
+            //   total: response.total_pages * 20,
+            //   pageElementSort: ['$page', '$size', '$jump', '$info']
+            // });
+        });
+    </script>
+</body>
+
+</html>

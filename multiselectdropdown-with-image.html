@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/semantic.min.css">
+    <style>
+        .main-cntr {
+            max-width: 300px;
+            margin: 30px auto;
+        }
+    </style>
+</head>
+<body>
+<div class="main-cntr">
+<div class="ui sub header">Search Selection</div>
+<div class="ui fluid multiple search normal selection dropdown">
+  <input type="hidden" name="country">
+  <i class="dropdown icon"></i>
+  <div class="default text">Select Country</div>
+  <div class="menu">
+    <div class="item" data-value="af"> <img src="./image/milky-way-2695569__340.jpg"> Afghanistan</div>
+    <div class="item" data-value="ax"> <img src="./image/milky-way-2695569__340.jpg"> Aland Islands</div>
+    <div class="item" data-value="al"> <img src="./image/milky-way-2695569__340.jpg"> Albania</div>
+    <div class="item" data-value="dz"> <img src="./image/milky-way-2695569__340.jpg"> Algeria</div>
+    <div class="item" data-value="as"> <img src="./image/milky-way-2695569__340.jpg"> American Samoa</div>
+    <div class="item" data-value="ad"> <img src="./image/milky-way-2695569__340.jpg"> Andorra</div>
+    <div class="item" data-value="ao"> <img src="./image/milky-way-2695569__340.jpg"> Angola</div>
+    <div class="item" data-value="ai"> <img src="./image/milky-way-2695569__340.jpg"> Anguilla</div>
+    <div class="item" data-value="ag"> <img src="./image/milky-way-2695569__340.jpg"> Antigua</div>
+    <div class="item" data-value="ar"> <img src="./image/milky-way-2695569__340.jpg"> Argentina</div>
+  </div>
+</div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/semantic.min.js"></script>
+<script>
+    $(document).on("ready", function(){
+    $('.ui.normal.dropdown')
+  .dropdown({
+    onChange: function(value, text, $choice){
+        console.log(value);
+        console.log(text);
+        console.log($choice);
+    }
+  })
+
+   
+    })
+</script>
+</body>
+</html>

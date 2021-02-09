@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* common CSS */
+
+body {
+    background: #444;
+    padding-left: 50%;
+}
+
+.contr {
+    padding-top: 40%;
+    transform-origin: 0% 0%;
+    animation: spinning 5s ease-in-out 0s infinite alternate;
+    transform-style: preserve-3d;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotateY(0deg)
+    }
+
+    to {
+        transform: rotateY(360deg)
+    }
+}
+
+
+.preface {
+    position: absolute;
+    transform: rotateX(45deg);
+    transform-style: preserve-3d;
+}
+
+.contr .common {
+    height: 80px;
+    width: 80px;
+    display: flex;
+    border: 1px solid rgb(204, 203, 203);
+    border-radius: 6px;
+    background: rgb(226, 226, 226);
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: black;
+    margin: 3px;
+}
+
+.dice2,
+.dice3,
+.dice4,
+.dice5,
+.dice6 {
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.dice4 div,
+.dice5 div,
+.dice6 div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 1 dot dice */
+.dice1 {
+    align-items: center;
+    justify-content: center;
+    transform-origin: top;
+    transform: translateY(-200px); 
+    transform: rotateX(90deg);
+}
+
+/* 2 dot dice */
+.dice2 {
+    transform: translateZ(80px);
+}
+
+.dice2 .dot:last-child {
+    align-self: flex-end;
+}
+
+/* 3 dot dice */
+.dice3 {
+    transform-origin: bottom;
+    transform: translateY(200px);
+    transform: rotateX(-90deg);
+}
+
+.dice3 .dot:nth-child(2) {
+    align-self: center;
+}
+
+.dice3 .dot:nth-child(3) {
+    align-self: flex-end;
+}
+
+/* 5 dot dice */
+.dice5 {
+    transform-origin: left;
+    transform: translateX(-200px);
+    transform: rotateY(-90deg);
+}
+
+.dice5 span.dot {
+    justify-content: center;
+    align-self: center;
+}
+
+.dice6 {
+    transform-origin: right;
+    transform: translateX(200px);
+    transform: rotateY(90deg);
+}
+

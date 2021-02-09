@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <style>
+        .petel {
+            fill: rgb(250, 114, 250);
+        }
+
+        .circle {
+            fill: rgb(252, 6, 252);
+        }
+
+        svg {
+            border: 2px solid black;
+        }
+
+        polygon {
+            stroke: black;
+            stroke-width: 2px;
+        }
+
+        .mountain {
+            fill: rgb(117, 2, 2);
+        }
+
+        .hut-cap {
+            fill: rgb(250, 143, 250);
+        }
+
+        .hut-body {
+            fill: rgb(250, 156, 250);
+        }
+
+        .inside-home {
+            fill: rgb(218, 218, 218);
+        }
+
+        .door {
+            fill: rgb(247, 84, 55);
+        }
+
+        .tree-bush {
+            fill: rgba(74, 245, 74, 0.678);
+        }
+
+        .hut-cap-window {
+            fill: rgb(211, 208, 208);
+        }
+
+        .main.active {
+            transform: translateX(10%);
+            transition: transform 1s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <svg width="700px" height="500px">
+
+            <!-- sun code -->
+            <circle cx="350" cy="50" r="25" fill="orange" />
+
+            <!-- mountain code -->
+            <path class="mountain" d="M0 100 Q175 -70 350 100 Q500 -70 700 100" />
+
+            <!-- hut code starts-->
+            <polyline class="hut-body" points="50,240 50,400  250,400 250,240" stroke-width="2" stroke="black"
+                fill="white" />
+            <polygon class="hut-cap" points="30,240 150,120 270,240" fill="white" />
+            <circle class="hut-cap-window" cx="150" cy="180" r="20" fill="white" stroke-width="2" stroke="black" />
+            <polyline points="130,180 170,180" stroke-width="2" stroke="black" fill="white" />
+            <polyline points="150,160 150,200" stroke-width="2" stroke="black" fill="white" />
+            <polyline class="inside-home" points="110,400 110,300 190,300 190,400" stroke-width="2" stroke="black"
+                fill="white" />
+            <polyline class="door" points="190,300 120,310 120,400 190,400" stroke-width="2" stroke="black"
+                fill="white" />
+            <ellipse class="door-handle" cx="130" cy="350" rx="5" ry="10" stroke-width="2" stroke="black"
+                fill="white" />
+            <!-- hut code ends-->
+
+            <!-- gate code starts-->
+            <polyline class="gate" points="0,420 50,500 50,420 100,500 100,420" stroke-width="2" stroke="black"
+                fill="white" />
+            <polyline class="gate"
+                points="200,500 200,420 250,500 250,420 300,500 300,420 350,500 350,420 400,500 400,420 450,500 450,420 500,500 500,420 550,500 550,420 600,500 600,420 650,500 650,420 700,500"
+                stroke-width="2" stroke="black" fill="white" />
+            <polyline class="gate" points="0,445 700,445" stroke-width="2" stroke="black" fill="white" />
+            <polyline class="gate" points="0,475 700,475" stroke-width="2" stroke="black" fill="white" />
+            <!-- gate code starts-->
+
+            <!-- tree code starts-->
+            <path class="tree-stem" d="M350 240 Q410 330 350 400" stroke-width="2" stroke="black" fill="white" />
+            <path class="tree-stem" d="M450 240 Q390 330 450 400" stroke-width="2" stroke="black" fill="white" />
+            <path class="tree-bush" d="M350 270 Q240 220 350 180 Q320 80 420 130 Q480 80 480 180 Q550 200 460 270"
+                stroke-width="2" stroke="black" fill="white" />
+            <!-- tree code ends-->
+
+            <!-- cycle code starts -->
+            <circle cx="500" cy="380" r="25" fill="white" stroke-width="2" stroke="black" />
+            <circle cx="600" cy="380" r="25" fill="white" stroke-width="2" stroke="black" />
+            <circle cx="540" cy="385" r="10" fill="white" stroke-width="2" stroke="black" />
+            <circle cx="600" cy="380" r="5" fill="white" stroke-width="2" stroke="black" />
+            <polygon class="cycle" points="540,385 520,340 580,340" fill="transparent" />
+            <polyline points="520,340 500,380" stroke-width="2" stroke="black" fill="white" />
+            <polyline points="540,385 600,380" stroke-width="2" stroke="black" fill="white" />
+            <polyline points="520,340 510,330" stroke-width="2" stroke="black" fill="white" />
+            <polyline points="490,330 530,330" stroke-width="2" stroke="black" fill="white" />
+            <polyline points="581,340 581,330" stroke-width="2" stroke="black" fill="white" />
+            <ellipse cx="581" cy="330" rx="10" ry="5" stroke-width="2" stroke="black" fill="white" />
+            <!-- cycle code ends -->
+        </svg>
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

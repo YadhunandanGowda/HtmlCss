@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/ion.rangeSlider.min.css">
+</head>
+<style>
+    
+
+
+</style>
+<body>
+    <div class="container">
+        <input id="geo-range" class="irs-hidden-input"
+        type="text"
+    >
+    </div>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/ion.rangeSlider.min.js"></script>
+    <script>
+    $("#geo-range").ionRangeSlider({
+        type:"double",
+        grid: true,
+        min: 1,
+        max: 10,
+        postfix: "km",
+        step: 1,
+        from: 5
+    });
+    $("#geo-range").on('change',function(data){console.log(data.currentTarget.value)});
+    </script>
+</body>
+</html>
