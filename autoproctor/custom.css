@@ -92,3 +92,19 @@ nav .nav-wrapper {
 #feature-set .slide-right .feat-box{
     background: white;
 }
+
+button#homepage-cta-btns--demo {
+    background: linear-gradient(
+180deg
+, #5AFF15,#00B712);
+}
+
+button#homepage-cta-btns--install {
+    background: linear-gradient(
+180deg
+, #2497fe, #0057a5);
+}
+
+.gs-wrapper span.material-icons {
+    color: #0087ff;
+}
