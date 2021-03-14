@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0 user-scalable=no">
+        <title>Aine-AI</title>
+        <link rel="stylesheet" href="./css/fontawsmall.min.css"/>
+        <link rel="stylesheet" href="./css/aine-ai.css"/>
+    </head>
+    <body>
+        <header></header>
+        <aside>
+            <a class="CompLogo" href="javascript:void(0)"><img src="./image/coronavirus.svg" alt="company icon"></a>
+            <ul class="menu">
+                <li class="options active"><i class="far fa-user"></i><span>Students</span></li>
+                <li class="options"><i class="fas fa-book"></i><span>Lesson Plan</span></li>
+                <li class="options"><i class="fas fa-cog"></i><span>Settings</span></li>
+            </ul>
+        </aside>
+        <main>
+            <div class="breadcrumb">
+                <a href="javascript:void(0)"><i class="fas fa-caret-left"></i>Videos</a>
+            </div>
+            <section class="uploadVideo">
+                <div class="insert">
+                    <input type="text" placeholder="Insert URL here" value=""/>
+                </div>
+                <div class="upld">
+                    <p class="ortext">or</p>
+                    <input type="file" name="" id="upldBtn">
+                    <label for="upldBtn">Upload</label>
+                </div>
+            </section>
+        </main>
+        <script>
+            //click event for side menu
+            let list = document.querySelectorAll("aside ul li.options");
+            for(let item of list){
+                item.addEventListener("click", function(e){
+                    for(let sub of list){
+                        sub.classList.remove("active");
+                    }
+                    this.classList.add("active");
+                })
+            }
+        </script>
+    </body>
+</html>

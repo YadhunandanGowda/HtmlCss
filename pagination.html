@@ -9,26 +9,42 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/mricode.pagination.css">
     <style>
-        .pagition {
+        .pagination {
             position: absolute;
             left: 50%;
             top: 90%;
             transform: translate(-50%, -90%);
         }
+
+        #textarea {
+    -moz-appearance: textfield-multiline;
+    -webkit-appearance: textarea;
+    border: 1px solid gray;
+    font: medium -moz-fixed;
+    font: -webkit-small-control;
+    height: 28px;
+    overflow: auto;
+    padding: 2px;
+    resize: both;
+    width: 400px;
+}
+
     </style>
 </head>
 
 <body>
-    <div class="pagition">
+    <textarea  onchange="something(this)">I am a textarea</textarea>
+    <div id="textarea" onchange="something(this)" contenteditable>I look like a textarea</div>
+    <div class="pagination">
     </div>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/mricode.pagination.js"></script>
     <script>
         $(document).on('ready', function () {
-            $('.pagition').pagination({
+            $('.pagination').pagination({
                 pageIndex: 0,
-                pageSize: 10,
-                total: 100
+                pageSize: 25,
+                total: 8000
             }).on("pageClicked", function (event, data) {
                 alert(data.pageIndex)
             });
@@ -45,6 +61,11 @@
             //   pageElementSort: ['$page', '$size', '$jump', '$info']
             // });
         });
+        
+
+function something(e){
+console.log(e.value)
+}
     </script>
 </body>
 

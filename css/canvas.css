@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+canvas {
+    border: 1px solid ;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}

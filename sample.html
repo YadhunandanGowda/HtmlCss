@@ -5,24 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .container article {
-            padding: 50px;
-        }
-        .container article:nth-child(odd) {
-            background-color: red;
-        }
     </style>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
 </head>
 <body>
-    <a href="#">hello world</a>
-    <div class="container">
-        <article>word</article>
-        <article>word</article>
-        <article>word</article>
-        <article>word</article>
-        <article>word</article>
-        <article>word</article>
-        <article>word</article>
+    <div class="container" >
+        <div class="one">
+            <div class="two" >
+                <p class="three d-flex justify-content-center">
+                    bootstrap CSS
+                </p>
+                <input type="text">
+                <div class="form-group">
+                    <input type="text" id="inout" class="form-control" >
+                    <button class="btn btn-success">Submit</button>
+                </div>
+            </div>
+        </div>
     </div>
+    <script>
+        
+        document.getElementById('inout').addEventListener("change", function(e) {
+            let arr = ["blue", "green", "orange", "yellow"];
+           e.target.style.backgroundColor = arr[Math.floor(Math.random()*4)];
+        })
+
+        // function alertValue(target) {
+        //     console.log(target)
+        // }
+    </script>
 </body>
 </html>

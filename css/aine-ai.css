@@ -1,0 +1,134 @@
+@font-face {
+    src: url(./fonts/WiproAkkurat-Regular.otf);
+    font-family: 'WiproAkkurat-Regular';
+}
+
+* {
+    margin: 0px;
+    padding:0px;
+    outline: none;
+}
+
+body {
+    background-color: rgb(243 243 243);
+    font-family: 'WiproAkkurat-Regular';
+}
+
+header {
+    height: 70px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: white;
+}
+
+aside {
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 90px;
+    background-color: white;
+    box-shadow: 0px 3px 10px 1px #b4b4b4;
+}
+
+aside .CompLogo {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+aside .CompLogo img{
+    width: 50px;
+}
+
+aside ul li.options {
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    color: gray;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+
+aside ul li.options.active {
+    background-color: #c9ddfc;
+    color: black;
+    font-weight: bold;
+}
+
+aside ul li.options.active::before {
+    content: " ";
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 3px;
+    height:100%;
+    background: blue;
+}
+
+aside ul li.options i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+main {
+    margin: 70px 0px 0px 90px;
+    padding: 30px;
+}
+
+main .breadcrumb a i {
+    margin-right: 5px;
+}
+
+main .breadcrumb a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+}
+
+main .uploadVideo {
+    padding: 5% 10%;
+}
+
+main .uploadVideo .insert {
+    margin-bottom: 30px;
+}
+
+main .uploadVideo .insert input {
+    width: 100%;
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+main .uploadVideo .insert input::-webkit-input-placeholder {
+    font-weight: bold;
+    color: rgb(94, 94, 94);
+}
+
+main .uploadVideo .upld .ortext{
+    text-align: center; 
+    margin: 0;
+    font-weight: bold;
+}
+
+main .uploadVideo .upld input {
+    display: none;
+}
+
+main .uploadVideo .upld input ~ label{
+    height:120px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:white;
+    font-weight: bold;
+    cursor: pointer;
+}
