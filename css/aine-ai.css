@@ -54,15 +54,22 @@ aside ul li.options {
     text-align: center;
     padding: 15px 10px;
     cursor: pointer;
+    transition: all 0.1s;
 }
 
-aside ul li.options.active {
+aside ul li.options.active{
     background-color: #c9ddfc;
     color: black;
     font-weight: bold;
 }
 
-aside ul li.options.active::before {
+aside ul li.options:hover{
+    background-color: #e1ebfa;
+    color: black;
+    font-weight: bold;
+}
+
+aside ul li.options.active::before  {
     content: " ";
     position: absolute;
     left: 0px;
@@ -90,6 +97,11 @@ main .breadcrumb a {
     text-decoration: none;
     color: gray;
     font-weight: bold;
+    transition: all 0.3s;
+}
+
+main .breadcrumb a:hover {
+    color: #3987fc;
 }
 
 main .uploadVideo {
@@ -131,4 +143,12 @@ main .uploadVideo .upld input ~ label{
     background:white;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 4px;
+    transform: scale(1);
+    transition: all 0.3s;
+}
+
+main .uploadVideo .upld input ~ label:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 1px rgb(219, 219, 219);
 }
