@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,33 +8,58 @@
     <style>
     </style>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <script src="./js/jquery.min.js"></script>
-</head>
-<body>
-    <div class="container" >
-        <div class="one">
-            <div class="two" >
-                <p class="three d-flex justify-content-center">
-                    bootstrap CSS
-                </p>
-                <input type="text">
-                <div class="form-group">
-                    <input type="text" id="inout" class="form-control" >
-                    <button class="btn btn-success">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script>
-        
-        document.getElementById('inout').addEventListener("change", function(e) {
-            let arr = ["blue", "green", "orange", "yellow"];
-           e.target.style.backgroundColor = arr[Math.floor(Math.random()*4)];
-        })
+    <style>
+        .parent {
+            width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+        }
 
-        // function alertValue(target) {
-        //     console.log(target)
+        .child {
+            height: 50px;
+            width: 50px;
+            background-color: black;
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <!-- <div class="container-fluid border p-3 m-auto row">
+        <div class="col-6 col-sm-3 border p-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3 border p-3">.col-6 .col-sm-3</div>
+    </div> -->
+
+    <div class="parent">
+        <div class="child">
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // function miniMaxSum(arr) {
+        //     let suOfArr = arr.reduce((a, b) => a + b);
+        //     let newArr = arr.map((x) => suOfArr - x);
+        //     let max = newArr[0];
+        //     let min = newArr[0];
+        //     newArr.forEach((t, i) => {
+        //         if (max < newArr[i + 1]) {
+        //             max = newArr[i + 1];
+        //         }
+        //         if (min > newArr[i + 1]) {
+        //             min = newArr[i + 1];
+        //         }
+        //     })
+        //     console.log(min, max);
         // }
+        // miniMaxSum([1, 2, 3, 4, 5])
     </script>
 </body>
+
 </html>

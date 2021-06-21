@@ -10,3 +10,34 @@ canvas {
     right: 0px;
     bottom: 0px;
 }
+
+.cursor {
+    width: 5px;
+    height: 5px;
+    /* background-color: #d0bb79; */
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: none;
+    transition: none;
+    Pointer-events: none;
+    z-index: 9999999999;
+}
+
+.cursor2 {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    /* border: 1px solid #d0bb79; */
+    border: 1px solid ;
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    -webkit-transition: none;
+    transition: none;
+    Pointer-events: none;
+    z-index: 9999999999;
+}

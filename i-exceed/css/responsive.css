@@ -1,0 +1,142 @@
+@media only screen and (max-width:1024px) {
+    main .userinfo-form {
+        width: 100%;
+    }
+    main .userinfo-form .form-continer, main .userinfo-form .info-contianer {
+        flex: 1;
+        width: 50%;
+    }
+    main .userinfo-form .form-continer .form-indiv-row {
+        flex-flow: wrap;
+    }
+    main .userinfo-form .form-continer .form-indiv-row .form-child {
+        flex: 100%;
+    }
+    .action-btn-sec {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width:900px) {
+    header {
+        padding: 15px;
+    }
+    .logo-container img {
+        width: 120px;
+    }
+    header .close-button {
+        right: 2.5rem;
+        top: 1rem;
+    }
+    aside {
+        top: 68px;
+    }
+    main {
+        margin-top: 68px;
+        margin-left: 132px;
+        padding: 30px 30px 50px 0px;
+    }
+    aside {
+        padding: 2rem 3rem;
+    }
+    main .userinfo-form .form-continer .form-indiv-row .form-child {
+        padding: 20px 20px 0px;
+    }
+    .action-btn-sec .btn {
+        padding: 10px 20px;
+    }
+    aside {
+        overflow: auto;
+        padding-bottom: 90px;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    header {
+        padding: 10px;
+    }
+    header .close-button {
+        right: 1.5rem;
+        top: 1rem;
+        width: 24px;
+        height: 24px;
+    }
+    .logo-container img {
+        width: 105px;
+    }
+    aside .steps-ttl {
+        display: none;
+    }
+    aside {
+        width: 100%;
+        height: auto;
+        padding: 2rem 2rem;
+        top: 54px;
+    }
+    aside .steps-contianer {
+        display: flex;
+        overflow: auto;
+        justify-content: center;
+    }
+    aside .steps-contianer .step:first-child {
+        margin-top: 0px;
+    }
+    aside .steps-contianer .step {
+        margin: 0px 15px;
+        width: 32px;
+        height: 32px;
+    }
+    aside .steps-contianer .step::after {
+        bottom: unset;
+        top: 50%;
+        left: unset;
+        right: -27px;
+        transform: translateY(-50%);
+        height: 4px;
+        width: 24px;
+    }
+    main {
+        margin-left: 0px;
+        margin-top: 144px;
+        padding: 0px 20px 30px;
+    }
+    main .usf-title {
+        padding-right: 0px;
+        text-align: center;
+        font-size: 1.6rem;
+    }
+    main .userinfo-form {
+        flex-wrap: wrap;
+    }
+    main .userinfo-form .form-continer, main .userinfo-form .info-contianer {
+        width: 100%;
+    }
+    main .userinfo-form .info-contianer .user-pic {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 15px 20px;
+    }
+    main .userinfo-form .info-contianer .user-pic .user-name {
+        color: white;
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+    main .userinfo-form .info-contianer .user-pic img {
+        width: 50px;
+        height: 50px;
+    }
+    main .userinfo-form .form-continer {
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    main .userinfo-form .form-continer .form-indiv-row .form-child .form-control.small-width {
+        width: 100%;
+    }
+    aside .steps-contianer .step:hover {
+        width: 32px;
+        height: 32px;
+    }
+    .action-btn-sec .btn {
+        padding: 3% 12%;
+    }
+}
