@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <!-- Revive Adserver Asynchronous JS Tag - Generated with Revive Adserver v5.3.1 -->
+                                    <ins data-revive-zoneid="1" data-revive-id="53126d71827fcba70ff68055b9a73ca1"></ins>
+                                    <script async src="//localhost/revive/www/delivery/asyncjs.php"></script>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <div class="laed_head mb-5">
+                                        <span lang="en" class="register_text">Register</span>
+                                    </div>
+
+                                    <div>
+                                        <div class="re_form pdlr50">
+                                            <div class="Card" style="display: inline-flex; flex-wrap: wrap;">
+                                                <div class="form_div col-md-6 pdr">
+                                                    <label for="modal" lang="en" class="form-label">Enter_your_Name<span class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="register_name" placeholder="Name.">
+                                                </div>
+                                                <div class="form_div col-md-6 pdl">
+                                                    <label for="modal" lang="en" class="form-label">Enter_your_phone_no<span class="text-danger">*</span></label>
+                                                    <div class="mb-3" style="display: flex;">
+                                                        <select name="countryCode" id="countryCodeId" class="form-control" style="width: 90px; border-radius: 8px 2px 2px 8px !important;">
+                                                        </select>
+                                                        <input type="number" class="form-control" style="border-radius: 2px 8px 8px 2px !important;" id="register_phone" placeholder="Phone No.">
+                                                    </div>
+                                                </div>
+                                                <div class="form_div col-md-6 pdr">
+                                                    <label for="modal" class="form-label" lang="en">Enter_new_password<span class="text-danger">*</span></label>
+                                                    <input type="password" onchange="verifyPasswords();" class="form-control" id="newPassword" placeholder="Enter new password">
+                                                </div>
+                                                 <div class="form_div col-md-6 pdl">
+                                                    <label for="modal" class="form-label" lang="en">Renter_new_password<span class="text-danger">*</span></label>
+                                                    <input type="password" onchange="verifyPasswords();" class="form-control" id="newPassword_confirm" placeholder="Renter new password">
+                                                </div>
+                                            </div>
+                                            <div  id="register_error" style="display: none;" class="text-center alert_m">
+                                            </div>
+                                            <div class="text-center">
+                                                <button id="sendotpcompt" class="send_otp_reg w-60" lang="en" onclick="register( $('#register_name').val(), '+' + $('#countryCodeId :selected').val() + $('#register_phone').val(), $('#newPassword').val(), $('#newPassword_confirm').val(), selectedAccess, handleRegisterResult);">SEND_OTP</button>
+                                            </div>
+                                            <hr>
+
+                                            <p lang="en" class="member">If_you_are_member_please</p>
+                                            <div class="text-center">
+                                                <button lang="en" data-bs-toggle="modal" onclick="javascript:loadCountryCodes();" data-bs-target="#login_popup" class="reg_login mb-2 text-center">
+                                                     Login
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4">
+                                    <div class="right_banner">
+                                        <a href="">
+                                            <img class="img1" width="100%" src="images/jone_deere.png">
+                                        </a>
+                                        <a href="">
+                                            <img class="img2 mb-4" width="100%" src="images/tata_motors.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+        <!-- modal_Add_apointment -->
+        <div class="modal fade Add_apointment" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="apointment_header">
+                        <h5 lang="en">Add_Appoinments</h5>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        <div class="apointment_div">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label lang="en" class="modal_label">Name:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="modal_input">
+                                            <input type="text" placeholder="Name" class="form-control" id="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label lang="en" class="modal_label">Choose_Date</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="modal_input">
+                                            <input type="date" id="start" name="trip-start" value="2021-10-01" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label lang="en" class="modal_label">Time</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="modal_input">
+                                            <input type="text" placeholder="00:00AM" class="form-control" id="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label lang="en" class="modal_label">Location</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="modal_input">
+                                            <input type="text" placeholder="Location" class="form-control" id="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label lang="en" class="modal_label">Type_of_crop</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="modal_input">
+                                            <input type="text" placeholder="Wheat, 10 acres" class="form-control" id="" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="apointment_button">
+                                    <a href=""><button lang="en" class="" type="button">Submit</button></a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="text/javascript">
+            function verifyPasswords(){
+                if(  $('#newPassword').val() == '' || ($('#newPassword').val() !=  $('#newPassword_confirm').val())){
+                    $('#sendotpcompt').attr("disabled", true);
+                    $('#register_error').show();
+                    $('#register_error').text('Please ensure passwords are same.');
+                }
+                else{
+                    $('#sendotpcompt').removeAttr("disabled");
+                    $('#register_error').hide();
+                }
+            }
+            $(document).on('keyup','#register_phone',function(e){
+                if(  $('#register_phone').val() == '' || ($('#register_phone').val().length <= 9) || ($('#register_phone').val().length > 10)){
+                    $('#sendotpcompt').attr("disabled", true);
+                    $('#register_error').show();
+                    $('#register_error').text('Please provide valid phone number');
+                }
+                else{
+                    $('#sendotpcompt').removeAttr("disabled");
+                    $('#register_error').hide();
+                }
+		    });
+            jQuery(document).ready(function ($) {
+                "use strict";
+               
+            });
+
+        </script>
+        
+
+        
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var menu = "close";
+                $(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function () {
+                    if (menu === "close") {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
+                        menu = "open";
+                    } else {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
+                        menu = "close";
+                    }
+                });
+            });
+        </script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                "use strict";
+                //loadLanguages();
+                loadCountryCodes();
+                $("#customers-testimonials").owlCarousel({
+                    loop: true,
+                    center: true,
+                    items: 3,
+                    margin: 30,
+                    autoplay: true,
+                    dots: true,
+                    nav: true,
+                    autoplayTimeout: 8500,
+                    smartSpeed: 450,
+                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        768: {
+                            items: 2,
+                        },
+                        1170: {
+                            items: 3,
+                        },
+                    },
+                });
+            });
+
+
+            var selector = '.rg_nav li';
+
+                $(selector).on('click', function(){
+                    $(selector).removeClass('active');
+                    $(this).addClass('active');
+                });
+
+
+        </script>
+    </body>
+</html>

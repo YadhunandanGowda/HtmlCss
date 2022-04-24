@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <body>
+        
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <div class="laed_head mb-5">
+                                        <h3 lang="en">Confirm Account</h3>
+                                    </div>
+
+                                    <div class="register_main">
+                                        <div class="recover_password" lang="en">
+                                            Recover_your_password_for_your_Kisan_Gateway_account_with_the_following
+                                        </div>
+                                        <div class="re_form login">
+                                                <div class="form_div">
+                                                    <label for="modal" lang="en" class="form-label">Enter_your_phone_no<span class="text-danger">*</span></label>
+                                                    <div class="mb-3" style="display: inline-flex; width: 100%;">
+                                                        <select name="countryCode" id="countryCodeId" class="form-control" style="width: 90px; border-radius: 8px 2px 2px 8px !important;">
+                                                        </select>
+                                                        <input type="number" class="form-control" id="confirm_account_phone" style="border-radius: 2px 8px 8px 2px !important;" placeholder="Phone No.">
+                                                    </div>
+                                                </div>
+                                                <button id="cnfrmaccotp" class="send_otp_reg" lang="en" onclick="resendConfirmationCode( '+' + $('#countryCodeId :selected').val() + $('#confirm_account_phone').val(), handle_ConfirmAccount_initiate);">SEND_OTP</button>
+                                                <hr>
+                                            <div id="confrmaccount_error" style="display: none;" class="alert_m">
+                                            </div>
+                                            <p class="member" lang="en">If_you_are_member_please</p>
+                                            <div class="text-center">
+                                                <button data-bs-toggle="modal" onclick="javascript:loadCountryCodes();" data-bs-target="#login_popup" lang="en" class="reg_login mb-2 text-center">
+                                                     Login
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4">
+                                    <div class="right_banner">
+                                        <a href="">
+                                            <img class="img1" width="100%" src="images/jone_deere.png">
+                                        </a>
+                                        <a href="">
+                                            <img class="img2 mb-4" width="100%" src="images/tata_motors.png">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+        </main>
+        <script type="text/javascript">
+            $(document).on('keyup','#confirm_account_phone',function(e){
+                if(  $('#confirm_account_phone').val() == '' || ($('#confirm_account_phone').val().length <= 9) || ($('#confirm_account_phone').val().length > 10)){
+                    $('#cnfrmaccotp').attr("disabled", true);
+                    $('#confrmaccount_error').show();
+                    $('#confrmaccount_error').text('Please provide valid phone number');
+                }
+                else{
+                    $('#cnfrmaccotp').removeAttr("disabled");
+                    $('#confrmaccount_error').hide();
+                }
+		    });
+            $(document).ready(function () {
+                //loadLanguages();
+                loadCountryCodes();
+            });
+            
+        </script>
+    </body>
+</html>

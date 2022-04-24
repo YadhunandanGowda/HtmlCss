@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <main class="main_content">
+        <div class="pg_top_banner">
+            <div class="pg_top_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="section1" class="top_banner_img">
+                                <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="lead_section">
+            <div class="lead_main">
+                <div class="container">
+                    <div class="lead_bg">
+                        <div class="row">
+                            <div class="col-md-8 mb-4">
+                                <section class="wizard-section">
+                                    <div class="no-gutters">
+                                        <div class="form-wizard">
+                                            <div class="laed_head">
+                                                <h2 class="w-100"><span>Add </span> Photos & video</h2>
+                                            </div>
+
+                                            <div class="add_media">
+                                                <p>Add max 4 images with 2 mb size jpeg or png format</p>
+                                                <div class="loader"></div>
+                                                <div style="display: flex;">
+                                                    <div id ="dealer_photos_listId" class="dealer_photos_list">
+                                                    </div>
+                                                    <div class="dealer_photos">
+                                                        <div class="plus">
+                                                            <form method="POST" style="position: absolute;" enctype="multipart/form-data" id="fileUploadForm">
+                                                                <input style="opacity: 0;width: 60px;" type="file" id="fileinputId" />
+                                                            </form>
+                                                            <a><i class="fas fa-plus"></i></a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+
+                                            <div class="share_youtube_url">
+                                                <p>Please share your youtube URL</p>
+                                                <div style="display: flex;">
+                                                    <input class="youtube_url" type="text" name="youtube url"
+                                                    placeholder="" />
+                                                <a id="add_youtubeurlId" class="form-wizard-next-btn float-right">
+                                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAABXElEQVRogWNgGAWjYBSMgoEEjLgkTGbc/g9jf31xD6uadjseqjmk5ZYYsqM6T2eoVhCjj4lqLqAi+M/AUG4643YHMWpZaO0YGCgrKUbhd/X04lUP9QQDoZgYlDEAA8TExKD2AAMDYU8Meg8wMEA8gUtuSHgAHxj1wECDIe8BouoBRmYWhv9//2CIf/z5j4GfnbgwwFfuf/rNTJQZ2ABRtrPziTAwMmP6dd2tnwwff/4j23IGBojjt77iJVs/UTHAzM7FwCUqhyH+lIGBYfJDsu2mChjyeWDUAwMNRj0w0ICoUmhugAyDnjgHrd2CAi6++MGQsvEJQXVExQC9Hc/AwMCgL0GcnSMjCaGDCzfvUtsdDAwMDAwG6sok6xmZMUBOSNEKjMwYGM0DVASjeWCgwWgeGGgwmgcGGhDlgYsvftDaHRjgApF2EpWEiGmXDxQY8kloFIyCUTAKBhYAAEvUTIshBoCmAAAAAElFTkSuQmCC"/></i>
+                                                </a>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <a style="font-size: 12px;color: #0d6efd" id="existingyoutubrurlid"></a>
+                                                    <i onclick="javascript: var d= $('#existingyoutubrurlid').val();deleteMediaListing(d);" class="fas fa-trash-alt youtubeurldelete"></i>
+                                                </div>
+                                                
+                                                <hr />
+                                                <div class="d-flex text-right">
+                                                    <div class="w-50">
+                                                        <div class="or"><span>Or</span></div>
+                                                    </div>
+                                                    <div class="w-50">
+                                                        <div class="youtube_logo"><img src="images/youtube_logo.png" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="add_media media2">
+                                                    <p>Add one mp4 format video with less than 1mb size</p>
+                                                    <div class="dealer_photos_list">
+                                                        <div class="loader"></div>
+                                                        <div class="dealer_photos_list">
+                                                            <video id="dealer_videos_listId" style="width: 120px;height: 90px;" controls>
+                                                            </video>
+                                                        </div>
+                                                        <div class="dealer_photos">
+                                                            <div class="plus">
+                                                                <form method="POST" style="position: absolute;" enctype="multipart/form-data" id="fileUploadForm1">
+                                                                    <input style="opacity: 0;width: 60px;" type="file" id="fileinputId1" />
+                                                                </form>
+                                                                <a><i class="fas fa-plus"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div style="float: right;"
+                                                class="col-md-6 form-group clearfix button_div wizat_btn_flex">
+                                                <a href="javascript:history.back();"
+                                                    class="form-wizard-previous-btn float-left">
+                                                    <div class="back_btn"><i class="fas fa-chevron-left"></i> Back</div>
+                                                </a>
+
+                                                <a href="javascript:refreshPage('#Dealer_priview_listing?ListingId='+ getUrlParameter('ListingId'));"
+                                                    class="form-wizard-next-btn float-right">
+                                                    <div class="add_photos">Next <i class="fas fa-chevron-right"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="right_banner">
+                                    <a href="">
+                                        <img class="img1" width="100%" src="images/jone_deere.png" />
+                                    </a>
+                                    <a href="">
+                                        <img class="img2" width="100%" src="images/tata_motors.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-4">
+                        <div class="col-md-12">
+                            <div class="top_banner_img">
+                                <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="offer_zone">
+            <h3 class="section_head text-white">OFFER ZONE</h3>
+            <div class="container">
+                <div id="customers-testimonials" class="owl-carousel">
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="bg_news">
+                <h3 class="section_head text-white">You can register as a</h3>
+                <p class="section_des text-white">Get right services for your need</p>
+                <div class="container">
+                    <p class="view_all">SEE ALL</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Sales webinar</h3>
+                                <p class="date">28th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Farmer webinar</h3>
+                                <p class="date">29th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Sales webinar</h3>
+                                <p class="date">30th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide text-center">
+                        <a href=""><button type="button">Farmers Guide and information</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            // click on next button
+            jQuery(".form-wizard-next-btn").click(function () {
+                var parentFieldset = jQuery(this).parents(".wizard-fieldset");
+                var currentActiveStep = jQuery(this).parents(".form-wizard").find(".form-wizard-steps .active");
+                var next = jQuery(this);
+                var nextWizardStep = true;
+
+                if (nextWizardStep) {
+                    next.parents(".wizard-fieldset").removeClass("show", "400");
+                    currentActiveStep.removeClass("active").addClass("activated").next().addClass("active", "400");
+                    next.parents(".wizard-fieldset").next(".wizard-fieldset").addClass("show", "400");
+                    jQuery(document)
+                        .find(".wizard-fieldset")
+                        .each(function () {
+                            if (jQuery(this).hasClass("show")) {
+                                var formAtrr = jQuery(this).attr("data-tab-content");
+                                jQuery(document)
+                                    .find(".form-wizard-steps .form-wizard-step-item")
+                                    .each(function () {
+                                        if (jQuery(this).attr("data-attr") == formAtrr) {
+                                            jQuery(this).addClass("active");
+                                            var innerWidth = jQuery(this).innerWidth();
+                                            var position = jQuery(this).position();
+                                            jQuery(document).find(".form-wizard-step-move").css({ left: position.left, width: innerWidth });
+                                        } else {
+                                            jQuery(this).removeClass("active");
+                                        }
+                                    });
+                            }
+                        });
+                }
+            });
+            //click on previous button
+            jQuery(".form-wizard-previous-btn").click(function () {
+                var counter = parseInt(jQuery(".wizard-counter").text());
+                var prev = jQuery(this);
+                var currentActiveStep = jQuery(this).parents(".form-wizard").find(".form-wizard-steps .active");
+                prev.parents(".wizard-fieldset").removeClass("show", "400");
+                prev.parents(".wizard-fieldset").prev(".wizard-fieldset").addClass("show", "400");
+                currentActiveStep.removeClass("active").prev().removeClass("activated").addClass("active", "400");
+                jQuery(document)
+                    .find(".wizard-fieldset")
+                    .each(function () {
+                        if (jQuery(this).hasClass("show")) {
+                            var formAtrr = jQuery(this).attr("data-tab-content");
+                            jQuery(document)
+                                .find(".form-wizard-steps .form-wizard-step-item")
+                                .each(function () {
+                                    if (jQuery(this).attr("data-attr") == formAtrr) {
+                                        jQuery(this).addClass("active");
+                                        var innerWidth = jQuery(this).innerWidth();
+                                        var position = jQuery(this).position();
+                                        jQuery(document).find(".form-wizard-step-move").css({ left: position.left, width: innerWidth });
+                                    } else {
+                                        jQuery(this).removeClass("active");
+                                    }
+                                });
+                        }
+                    });
+            });
+            //click on form submit button
+            jQuery(document).on("click", ".form-wizard .form-wizard-submit", function () {
+                var parentFieldset = jQuery(this).parents(".wizard-fieldset");
+                var currentActiveStep = jQuery(this).parents(".form-wizard").find(".form-wizard-steps .active");
+                parentFieldset.find(".wizard-required").each(function () {
+                    var thisValue = jQuery(this).val();
+                    if (thisValue == "") {
+                        jQuery(this).siblings(".wizard-form-error").slideDown();
+                    } else {
+                        jQuery(this).siblings(".wizard-form-error").slideUp();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            document.getElementById('fileinputId').addEventListener('change', function(){
+                uploadFiles();
+        }, false);
+        document.getElementById('fileinputId1').addEventListener('change', function(){
+            uploadFilesVideo();
+        }, false);
+        document.getElementById('add_youtubeurlId').addEventListener('click', function(){
+            if($('.youtube_url').val() != "" && $('.youtube_url').val() != null
+            && ($('.youtube_url').val().indexOf("youtube") > -1)){
+                AddYoutubeURL(getUrlParameter("ListingId"),"youtubr url",$('.youtube_url').val())
+            }
+        }, false);
+        
+        LoadListingImages(getUrlParameter("ListingId"));
+         });
+    </script>
+
+</body>
+
+</html>

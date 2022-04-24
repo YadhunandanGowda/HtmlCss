@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            <div class="row">
+                                <div class="">
+                                    <div class="laed_head">
+                                        <h2 class="w-100">
+                                            <span>Welcome to </span> <br />
+                                            <b class="theme_color">Kisan Gateway</b>
+                                        </h2>
+                                        <p class="hlep_des">Please help us to know more about you</p>
+
+                                        <p id="treemapid" class="page_tital">Dealership <i class="fas fa-chevron-right"></i> <b id="formlandingid"></b></p>
+                                        <p class="required">* Required Field</p>
+
+                                        <div class="row mt-4">
+                                            <div class="dealer_main_form">
+                                                <div class="dealer_box1">
+                                                    <div class="row">
+                                                        <div class="col-md-6 rowpad">
+                                                            <div class="row p-0">
+                                                                <div class="col-md-4">
+                                                                    <label class="modal_label">Name <span class="text-danger">*</span></label>
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="modal_input">
+                                                                        <input type="text" class="form-control" id="nameId" placeholder="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 rowpad">
+                                                            <div class="row p-0">
+                                                                <div class="col-md-4">
+                                                                    <label class="modal_label">Email <span class="text-danger">*</span></label>
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="modal_input">
+                                                                        <input type="text" class="form-control" id="emailId" placeholder="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6 rowpad">
+                                                            <div class="row p-0">
+                                                                <div class="col-md-4">
+                                                                    <label class="modal_label">Phone</label>
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="modal_input">
+                                                                        <input type="text" class="form-control" id="phoneId" placeholder="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 rowpad">
+                                                            <div class="row p-0">
+                                                                <div class="col-md-4">
+                                                                    <label class="modal_label">GST Number (if any) </label>
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="modal_input">
+                                                                        <input type="text" class="form-control" id="gstnumberId" placeholder="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6 rowpad">
+                                                            <div class="row p-0">
+                                                                <div class="col-md-4">
+                                                                    <label class="modal_label">Name of the organisation (if any) </label>
+                                                                </div>
+                                                                <div class="col-md-8">
+                                                                    <div class="modal_input">
+                                                                        <input type="text" class="form-control" id="organizationnameid" placeholder="" />
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dealer_box2">
+                            <div class="row" id="ismultipleaddressid">
+                            <div class="col-md-6 rowpad">
+                                <div class="row p-0" style="flex-flow: nowrap;">
+                                    <div class="col-md-4">
+                                        <label class="modal_label">Address </label>
+                                    </div>
+                                    <div>
+                                        <div class="radio_button" style="margin-bottom: 13px;">
+                                            <div class="text-center form-check" style="display: inline-flex;">
+                                                <input type="radio" onclick=listAddress() name="addressAdd" style="margin-right: 15px;margin-top: 5px;" id="primaryaddress" checked/>
+                                                <label class="modal_label" for="primaryaddress">Use Primary Address</label>
+                                            </div>
+                                            <div class="text-center form-check" style="display: inline-flex;">
+                                                <input type="radio" onclick=ClearAddressFields() name="addressAdd" style="margin-right: 15px;margin-top: 5px;" id="newaddress"/>
+                                                <label class="modal_label" for="newaddress">New Address</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row" id="addressfieldsid">
+                                <div class="col-md-6 rowpad">
+                                    <div class="row p-0">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">Village / City <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <input type="text" class="form-control" id="address1Id" placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 rowpad">
+                                    <div class="row p-0">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">House No. & Street: </label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <input type="text" class="form-control" id="address2Id" placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 rowpad">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">Country <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <select class="form-select" onchange="listStates(value)" id="countryid">
+                                                    <option selected>--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 rowpad">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">State <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <select class="form-select" onchange="listDistrict(value)" id="stateid">
+                                                    <option>--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 rowpad">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">District <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <select class="form-select" onchange="listTehsil(value)" id="districtid">
+                                                    <option>--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 rowpad">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">Tehsil <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <select class="form-select" id="tehsilid">
+                                                    <option>--</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 rowpad">
+                                    <div class="row p-0">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">Pincode <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="modal_input">
+                                                <input type="text" class="form-control" id="pincodeid" placeholder="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 rowpad">
+                                    <div class="row p-0">
+                                        <div class="col-md-4">
+                                            <label class="modal_label">Referral Code </label>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="radio_button">
+                                                <div class="text-center form-check">
+                                                    <label for="self">
+                                                        Self
+                                                    </label>
+                                                    <input type="radio" name="referral" id="self" />
+                                                </div>
+                                                <div class="text-center form-check">
+                                                    <label for="friend">
+                                                        Friend
+                                                    </label>
+                                                    <input type="radio" name="referral" id="friend" checked />
+                                                </div>
+                                                <div class="text-center form-check">
+                                                    <label for="agent">
+                                                        Agent
+                                                    </label>
+                                                    <input type="radio" name="referral" id="agent" checked />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 b-in">
+                                            <div class="modal_input">
+                                                <input type="text" class="form-control" id="referalcodeId" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-check col-md-12 terms_co">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                                    <label class="form-check-label" for="defaultCheck1"> I agree to all <b>terms and conditions</b> </label>
+                                </div>
+
+                                <div class="text-center">
+                                    <a ><button id="registerdetailsId" class="register_btn">Register</button></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dealer_box3">
+                            <p>Or register as</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <a href="javascript:loadDealerForm('Farmer');"><button class="register_o">FARMAR</button></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <a href="javascript:GetCategoryList('ST');"><button class="register_o">Services providers</button></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="text-center">
+                                        <a href="javascript:loadDealerForm('Others');"><button class="register_o">Others</button></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer_zone">
+                <h3 class="section_head text-white">OFFER ZONE</h3>
+                <div class="container">
+                    <div id="customers-testimonials" class="owl-carousel">
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="bg_news">
+                    <h3 class="section_head text-white">You can register as a</h3>
+                    <p class="section_des text-white">Get right services for your need</p>
+                    <div class="container">
+                        <p class="view_all">SEE ALL</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">28th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Farmer webinar</h3>
+                                    <p class="date">29th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">30th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide text-center">
+                            <a href=""><button type="button">Farmers Guide and information</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div class="bottom_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div class="copyright">
+                            <p>2021 © Kisan Gateway. All Rights Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="links_bottom_footer">
+                            <ul>
+                                <li><a href="">Terms And Conditions</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Refund Policy</a></li>
+                                <li><a href="">Ads Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                listUsers();
+                listAddress();
+                listCountry();
+                $('#registerdetailsId').click(function(){
+                    //validation
+                    if($('#defaultCheck1').is(':checked')){
+                        var name = $('#nameId').val();
+                        var email = $('#emailId').val();
+                        var phone = $('#phoneId').val();
+                        var address1 = $('#address1Id').val();
+                        var address2 = $('#address2Id').val();
+                        var countryid = $('#countryid').val();
+                        var stateid = $('#stateid').val();
+                        var districtid = $('#districtid').val();
+                        var tehsilid = $('#tehsilid').val();
+                        var pincodeid = $('#pincodeid').val();
+                        var referalcodeId = $('#referalcodeId').val();
+                        var gstnumberId = $('#gstnumberId').val();
+                        var organizationnameid = $('#organizationnameid').val();
+                        if(name == '' || email == '' || phone == '' || address1 =='' 
+                        || countryid == '' || stateid == '' || districtid =='' || tehsilid == ''
+                        || pincodeid == ''){
+                            alert("Please fill all the data");
+                        }
+                        var inputdata = {
+                            "name":name,
+                            "email":email,
+                            "phone":phone,
+                            "address1":address1,
+                            "address2":address2,
+                            "countryid":countryid,
+                            "stateid":stateid,
+                            "districtid":districtid,
+                            "tehsilid":tehsilid,
+                            "pincodeid":pincodeid,
+                            "referalcodeId":referalcodeId,
+                            "gstnumberId":gstnumberId,
+                            "organizationnameid":organizationnameid,
+                            "farmnameid": "",
+                            "FathersNameId":"",
+                            "businesstypeid":"",
+                            "serviceid":"",
+                            "studfarmid":"",
+                            "licensenumberid":"",
+                            "ExperienceId":"",
+                            "degreecrftId":""
+                        }
+                        UpdateProfileDetails(inputdata);
+                    }
+                    else{
+                        alert("Please agree to all terms and conditions");
+                    }
+                    
+                });
+                if(localStorage['formlandingtext'] != '' && Object.prototype.toString.call(localStorage['formlandingtext']) == '[object String]'){
+                    $('#treemapid').show();
+                    $("#formlandingid").text(localStorage['formlandingtext']);
+                }
+                else{
+                    $('#treemapid').hide();
+                }
+            });
+        </script>
+
+    </body>
+</html>

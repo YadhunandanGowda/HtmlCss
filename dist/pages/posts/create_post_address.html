@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <main class="main_content">
+        <div class="pg_top_banner">
+            <div class="pg_top_bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="section1" class="top_banner_img">
+                                <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="lead_section">
+            <div class="lead_main">
+                <div class="container">
+                    <div class="lead_bg">
+                        <div class="row">
+                            <div class="col-md-8 mb-4">
+                                <section class="wizard-section">
+                                    <div class="no-gutters">
+                                        <div class="form-wizard">
+                                            <div class="laed_head">
+                                                <h2 class="w-100"><span>Selling Address </span> Information</h2>
+                                            </div>
+
+                                            <div class="row p-0 mt-5">
+                                                <div class="col-md-6">
+                                                    <div class="loader"></div>
+                                                    <div id="primaryaddressid" class="contect_in">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-12">
+                                                    <h5 class="other_address">Other Address</h5>
+                                                </div>
+                                                <div class="loader"></div>
+                                                <div id="otheraddressid" class="d-flex" style="overflow-x: scroll;"></div>
+                                                <div class="col-md-6 center_align mt-5">
+                                                    <div class="main_add_address">
+                                                        <a style="color: #128454;" data-bs-toggle="modal" data-bs-target="#add_addressid"> <i class="fas fa-plus"></i> Add a new address</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 form-group clearfix button_div wizat_btn_flex">
+                                                    <a href="javascript:history.back();"
+                                                        class="form-wizard-previous-btn float-left">
+                                                        <div class="back_btn"><i class="fas fa-chevron-left"></i> Back
+                                                        </div>
+                                                    </a>
+
+                                                    <a class="form-wizard-next-btn float-right">
+                                                        <div onclick="AddPostData($('.select_address').attr('id'));" class="add_photos">Add photos <i
+                                                                class="fas fa-chevron-right"></i></div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="col-md-4 mb-4">
+                                <div class="right_banner">
+                                    <a href="">
+                                        <img class="img1" width="100%" src="images/jone_deere.png" />
+                                    </a>
+                                    <a href="">
+                                        <img class="img2" width="100%" src="images/tata_motors.png" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row pb-4">
+                        <div class="col-md-12">
+                            <div class="top_banner_img">
+                                <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Add Address section -->
+         <div class="modal fade offer_filters_popup" id="add_addressid" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="offer_filterr">
+                            <h3>Add New Address</h3>
+
+                            <div class="filter_nm paymen_add">
+                                <form>
+                                    <div class="row" id="addressfieldsid">
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Name <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="nameId" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Email <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="emailId" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Phone</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="phoneId" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Village / City <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="address1Id" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">House No. & Street: </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="address2Id" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Country <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <select class="form-select" onchange="listStates(value)" id="countryid">
+                                                            <option selected>--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">State</label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <select class="form-select" onchange="listDistrict(value)" id="stateid">
+                                                            <option>--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">District <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <select class="form-select" onchange="listTehsil(value)" id="districtid">
+                                                            <option>--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Tehsil <span class="text-danger">*</span></label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <select class="form-select" id="tehsilid">
+                                                            <option>--</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                        <div class="col-md-6 rowpad">
+                                            <div class="row p-0">
+                                                <div class="col-md-4">
+                                                    <label class="modal_label">Pincode </label>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <div class="modal_input">
+                                                        <input type="text" class="form-control" id="pincodeid" placeholder="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+
+                                    <div class="text-right mt-3"><button data-bs-dismiss="modal" id="registerdetailsId" class="request">Add Address <i class="fa fa-angle-right"></i></button></div>
+                                </form>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- -------------------------- -->
+
+        <section class="offer_zone">
+            <h3 class="section_head text-white">OFFER ZONE</h3>
+            <div class="container">
+                <div id="customers-testimonials" class="owl-carousel">
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="item">
+                            <div class="offer_box"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="news">
+            <div class="bg_news">
+                <h3 class="section_head text-white">You can register as a</h3>
+                <p class="section_des text-white">Get right services for your need</p>
+                <div class="container">
+                    <p class="view_all">SEE ALL</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Sales webinar</h3>
+                                <p class="date">28th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Farmer webinar</h3>
+                                <p class="date">29th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="news_bob">
+                                <div class="news_img"></div>
+
+                                <h3>Sales webinar</h3>
+                                <p class="date">30th August</p>
+                                <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum
+                                    Ipsum Ipsum Ipsum is</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide text-center">
+                        <a href=""><button type="button">Farmers Guide and information</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            listAllAddress();
+            listCountry();
+            $('#countryid').val("98");
+            listStates("98");
+            listStates();
+            listDistrict();
+            listTehsil();
+
+            $('#registerdetailsId').click(function(){
+                        var name = $('#nameId').val();
+                        var email = $('#emailId').val();
+                        var phone = $('#phoneId').val();
+                        var address1 = $('#address1Id').val();
+                        var address2 = $('#address2Id').val();
+                        var countryid = $('#countryid').val();
+                        var stateid = $('#stateid').val();
+                        var districtid = $('#districtid').val();
+                        var tehsilid = $('#tehsilid').val();
+                        var pincodeid = $('#pincodeid').val();
+                        if(name == '' || email == '' || phone == '' || address1 =='' 
+                        || countryid == '' || stateid == '' || districtid =='' || tehsilid == ''
+                        || pincodeid == ''){
+                            alert("Please fill all the data");
+                        }
+                        var inputdata = {
+                            "name":name,
+                            "email":email,
+                            "phone":phone,
+                            "address1":address1,
+                            "address2":address2,
+                            "countryid":countryid,
+                            "stateid":stateid,
+                            "districtid":districtid,
+                            "tehsilid":tehsilid,
+                            "pincodeid":pincodeid
+                        }
+                        AddNewAddress(inputdata);
+                    });
+        });
+    </script>
+
+</body>
+
+</html>

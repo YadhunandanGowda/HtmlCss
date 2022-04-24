@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="images/main_logo.jpg" type="image/png" />
+    <title>Home || Kisan Gateway</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/media.css" />
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+
+    <script src="js/util.js"></script>
+    <script src="js/listingpost.js"></script>
+    <script src="js/categoryutil.js"></script>
+    <script src="js/session.js"></script>
+    <script src="js/listings.js"></script>
+    <script src="js/address.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script
+      src="js/js.cookie.js"
+      charset="utf-8"
+      type="text/javascript"
+    ></script>
+    <script
+      src="js/jquery-lang.js"
+      charset="utf-8"
+      type="text/javascript"
+    ></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.bundle.js"></script>
+    <script src="js/auth_controller.js"></script>
+    <script src="js/api_controller.js"></script>
+    <script src="js/rest/public_apis.js"></script>
+    <script src="js/rest/protected_apis.js"></script>
+    <script src="js/rest/view_creator.js"></script>
+
+  </head>
+  <body>
+    <div class="m_none">
+      <header class="main_header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-2 m_none">
+              <div class="main_logo">
+                <a href="">
+                  <img src="images/main_logo.jpg" />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-10">
+              <div class="top_menu">
+                <div class="menu_list">
+                  <div class="dropdown_location">
+                    <li class="menu-item">
+                      <a href="#"
+                        ><i class="fas fa-map-marker-alt"></i> Mangalore
+                        <i class="fas fa-sort-down"></i
+                      ></a>
+                      <ul class="drop-menu">
+                        <li class="drop-menu-item">
+                          <a href="#">Mangalore</a>
+                        </li>
+                        <li class="drop-menu-item">
+                          <a href="#">Mangalore</a>
+                        </li>
+                        <li class="drop-menu-item">
+                          <a
+                            href="javascript:lookupSystemResource(
+                                                        'list', handleCountryList
+                                                    );"
+                            >Get Countries</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+                  </div>
+                  <div class="menu_top_list">
+                    <ul class="list_view">
+                      <li>
+                        <a lang="en" href=""
+                          ><i class="fas fa-mobile-alt mr-1"></i>DOWNLOAD_APP</a
+                        >
+                      </li>
+                      <li id="loginregisterdiv">
+                        <a
+                          lang="en"
+                          data-bs-toggle="modal"
+                          data-bs-target="#login_popup"
+                          lang="en"
+                          href=""
+                          onclick="javascript:loadCountryCodes();"
+                          >LOGIN & REGISTER</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          lang="en"
+                          href="javascript:refreshPage('#contactus');"
+                          >Contact_us</a
+                        >
+                      </li>
+                      <li class="menu-item">
+                        <a lang="en" href="#"
+                          >Language <i class="fas fa-sort-down"></i
+                        ></a>
+                        <ul class="drop-menu" id="language_selection"></ul>
+                      </li>
+                      <li
+                        class="bell"
+                        id="header_notifications"
+                        style="display: hidden"
+                      >
+                        <a href="">
+                          <i class="fas fa-bell"></i>
+                          <div class="bell_count">5</div>
+                        </a>
+                      </li>
+                      <li id="header_profile" style="display: hidden">
+                        <div class="full_popup">
+                          <a class="user_p"
+                            ><div id="header_name"></div>
+                            <img
+                              class="home_profile"
+                              src="images/profile.jpg"
+                            />
+                          </a>
+                          <div class="user_profile">
+                            <div class="nm_user">
+                              <div id="header_name_popup"></div>
+                              <span id="header_phone_number_popup"></span>
+                            </div>
+                            <div class="user_sort">
+                              <p lang="en">My_Profile_Settings</p>
+                            </div>
+
+                            <div class="user_bttn">
+                              <a href="">
+                                <div lang="en" class="user_link">
+                                  <i class="fas fa-credit-card"></i>
+                                  My_transctions
+                                </div>
+                              </a>
+
+                              <a href="">
+                                <div lang="en" class="user_link">
+                                  <i class="fas fa-map-marker-alt"></i>
+                                  My_Address
+                                </div>
+                              </a>
+
+                              <a href="">
+                                <div lang="en" class="user_link">
+                                  <i class="fas fa-question-circle"></i>Support
+                                </div>
+                              </a>
+                              <a href="javascript:getCurrentSession(printJWT)">
+                                <div class="user_link">
+                                  <i class="fas fa-key"></i>JWT
+                                </div>
+                              </a>
+                              <a
+                                href="javascript:refreshPage('#change_password')"
+                              >
+                                <div lang="en" class="user_link">
+                                  <i class="fas fa-key"></i>Change_Password
+                                </div>
+                              </a>
+                            </div>
+
+                            <a href="javascript:signOut(handleLogout);"
+                              ><div lang="en" class="log_out_user">
+                                Logout
+                              </div></a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="menu_nav">
+                <ul class="menu_ul">
+                  <li><a lang="en" href="">Home</a></li>
+                  <li class="menu-item">
+                    <a lang="en" href="#"
+                      >Sell <i class="fas fa-sort-down"></i
+                    ></a>
+                    <ul class="drop-menu">
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Sell</a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Sell</a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Sell</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a lang="en" href="#"
+                      >Buy<i class="fas fa-sort-down"></i
+                    ></a>
+                    <ul class="drop-menu">
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Buy </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Buy </a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Buy </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="menu-item">
+                    <a lang="en" href="#"
+                      >Services<i class="fas fa-sort-down"></i
+                    ></a>
+                    <ul class="drop-menu">
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Services</a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Services</a>
+                      </li>
+                      <li class="drop-menu-item">
+                        <a lang="en" href="#">Services</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a lang="en" href="">Offer_Zone</a></li>
+                  <li><a lang="en" href="">Ad_Zone</a></li>
+                  <li>
+                    <a lang="en" href="javascript:refreshPage('#listings');"
+                      >My_Listing</a
+                    >
+                  </li>
+                  <li><a lang="en" href="">Payment_Summary</a></li>
+                  <li><a lang="en" class="menu_a" href="">My_Posting</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- mobile_menu -->
+    <div class="mobile-wrapper w_none">
+      <div class="mobile mobile-one">
+        <div class="header">
+          <div class="main_logo">
+            <img src="images/main_logo.jpg" />
+          </div>
+          <div class="menu_top_list">
+            <ul class="list_view">
+              <li class="bell">
+                <a href="">
+                  <i class="fas fa-bell"></i>
+                  <div class="bell_count">5</div>
+                </a>
+              </li>
+              <li>
+                <div class="full_popup" id="header_profile">
+                  <a class="user_p" id="header_name"
+                    >Rohit sharma
+                    <img class="home_profile" src="images/profile.jpg" />
+                  </a>
+                  <div class="user_profile">
+                    <div class="nm_user">
+                      <h3 id="header_name_popup">
+                        Rohit sharma <span>Rohit.sharma@gmail.com</span>
+                      </h3>
+                    </div>
+                    <div class="user_sort">
+                      <p lang="en">My_Profile_Settings</p>
+                    </div>
+
+                    <div class="user_bttn">
+                      <a href="">
+                        <div class="user_link">
+                          <i lang="en" class="fas fa-credit-card"></i>
+                          My_transctions
+                        </div>
+                      </a>
+
+                      <a href="">
+                        <div class="user_link">
+                          <i lang="en" class="fas fa-map-marker-alt"></i>
+                          My_Address
+                        </div>
+                      </a>
+
+                      <a href="">
+                        <div class="user_link">
+                          <i class="fas fa-question-circle"></i>Support
+                        </div>
+                      </a>
+
+                      <a href="">
+                        <div lang="en" class="user_link">
+                          <i class="fas fa-key"></i>Change_Password
+                        </div>
+                      </a>
+                    </div>
+
+                    <a href=""
+                      ><div lang="en" class="log_out_user">Logout</div></a
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div onclick="myFunction()" class="menu-toggle">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+        <div id="myDIV" class="mobile-nav">
+          <ul>
+            <li><a lang="en" href="">Home</a></li>
+            <li class="menu-item">
+              <a lang="en" href="#">Sell<i class="fas fa-sort-down"></i></a>
+              <ul class="drop-menu">
+                <li class="drop-menu-item">
+                  <a href="#">Sell 1</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">Sell 2</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">Sell 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a lang="en" href="#">Buy<i class="fas fa-sort-down"></i></a>
+              <ul class="drop-menu">
+                <li class="drop-menu-item">
+                  <a href="#">Buy 1</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">Buy 2</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">Buy 3</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-item">
+              <a lang="en" href="#">SERVICES<i class="fas fa-sort-down"></i></a>
+              <ul class="drop-menu">
+                <li class="drop-menu-item">
+                  <a href="#">SERVICES 1</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">SERVICES 2</a>
+                </li>
+                <li class="drop-menu-item">
+                  <a href="#">SERVICES 3</a>
+                </li>
+              </ul>
+            </li>
+            <li><a lang="en" href="">Offer_Zone</a></li>
+            <li>
+              <a lang="en" href="javascript:refreshPage('#listings');"
+                >My_Listing</a
+              >
+            </li>
+            <li><a lang="en" href="">Payment_Summery</a></li>
+            <li><a lang="en" href="">My_Posting</a></li>
+            <li><a lang="en" href="">DOWNLOAD_APP</a></li>
+            <li><a lang="en" href="">investors</a></li>
+            <li>
+              <a lang="en" href="javascript:refreshPage('#contactus');"
+                >Contact_us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------Header End here------------------------------ -->
+
+    <div id="content"></div>
+
+    <!-- -------------------------Login popup Start here------------------------------ -->
+    <div
+      class="modal fade login_popup"
+      id="login_popup"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="close_modal">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="login_popup_main">
+              <!-- <form> -->
+              <div class="login_inner">
+                <h3 lang="en">LOGIN</h3>
+
+                <div class="mb-3" style="display: inline-flex">
+                  <select
+                    name="countryCode"
+                    id="countryCodeId_login"
+                    class="form-control"
+                    style="
+                      width: 80px;
+                      border-radius: 15px 2px 2px 15px !important;
+                    "
+                  ></select>
+                  <input
+                    id="login_username"
+                    type="number"
+                    class="form-control"
+                    style="border-radius: 2px 15px 15px 2px !important"
+                    placeholder="Enter phone number"
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    id="login_password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Password"
+                  />
+                </div>
+
+                <button
+                  id="loginbuttonid"
+                  lang="en"
+                  type="submit"
+                  class=""
+                  onclick="javascript:signIn(
+                                      '+' + $('#countryCodeId_login :selected').val() + $('#login_username').val(),  $('#login_password').val(), handleLoginResult
+                                    );"
+                >
+                  Login
+                </button>
+                <div
+                  id="login_error"
+                  lang="en"
+                  style="display: none"
+                  class="alert_m"
+                ></div>
+                <div class="text-right forgot_pass" data-bs-dismiss="modal">
+                  <a lang="en" href="javascript:refreshPage('#changePassword');"
+                    >Forgot_password</a
+                  >
+                </div>
+              </div>
+              <button
+                style="display: none"
+                id="modalcloseid"
+                data-bs-dismiss="modal"
+              ></button>
+              <div class="bottom_login_part">
+                <p lang="en">If_you_are_not_a_member</p>
+
+                <div class="text-center">
+                  <button
+                    lang="en"
+                    onclick="refreshPage('#register');"
+                    data-bs-dismiss="modal"
+                    class="register_modal_btn"
+                  >
+                    Register
+                  </button>
+                </div>
+              </div>
+              <!-- </form> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------Login popup End here------------------------------ -->
+
+    <!-- Dealership_plan_more_popup -->
+    <div
+      class="modal fade offer_filters_popup"
+      id="plan_more_popup"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="offer_filterr more_popup">
+              <h3>Dealership plans Details</h3>
+
+              <div class="more_des_p">
+                <p>
+                  FREE - One listing at a time for 6 months (12 listings) from
+                  the date of registration. Unless the previous listing is
+                  marked SOLD OUT or DELETED, another free listing can not be
+                  avalied. For Additional Listing along with Free Listing,
+                  choose your plans as menioned below.FREE - One listing at a
+                  time for 6 months (12 listings) from the date of registration.
+                  Unless the previous listing is marked SOLD OUT or DELETED,
+                  another free listing can not be avalied. For Additional
+                  Listing along with Free Listing, choose your plans as menioned
+                  below.
+                </p>
+
+                <p>
+                  FREE - One listing at a time for 6 months (12 listings) from
+                  the date of registration. Unless the previous listing is
+                  marked SOLD OUT or DELETED, another free listing can not be
+                  avalied. For Additional Listing along with Free Listing,
+                  choose your plans as menioned below.FREE - One listing at a
+                  time for 6 months (12 listings) from the date of registration.
+                  Unless the previous listing is marked SOLD OUT or DELETED,
+                  another free listing can not be avalied. For Additional
+                  Listing along with Free Listing, choose your plans as menioned
+                  below.FREE - One listing at a time for 6 months (12 listings)
+                  from the date of registration. Unless the previous listing is
+                  marked SOLD OUT or DELETED, another free listing can not be
+                  avalied. For Additional Listing along with Free Listing,
+                  choose your plans as menioned below.
+                </p>
+
+                <p>
+                  FREE - One listing at a time for 6 months (12 listings) from
+                  the date of registration. Unless the previous listing is
+                  marked SOLD OUT or DELETED, another free listing can not be
+                  avalied. For Additional Listing along with Free Listing,
+                  choose your plans as menioned below.
+                </p>
+                <p>
+                  FREE - One listing at a time for 6 months (12 listings) from
+                  the date of registration. Unless the previous listing is
+                  marked SOLD OUT or DELETED, another free listing can not be
+                  avalied.
+                </p>
+
+                <div class="close text-right">
+                  <button
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    type="button"
+                  >
+                    close <i class="fa fa-angle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -----------------------Dealership_plan_more_popup----------------------- -->
+
+    <!-- -------------------------Footer Start here------------------------------ -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="footer_details">
+              <a class="logo_footer" href=""
+                ><img src="images/footer_logo.jpg"
+              /></a>
+              <p lang="en">Download_the_Kisan_Gateway_app_enjoy_features</p>
+
+              <img class="play_store" src="images/google_play.png" />
+
+              <div class="head_icon">
+                <p lang="en">Follow_us</p>
+                <ul>
+                  <li class="instagram">
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                  </li>
+                  <li class="twitter">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                  </li>
+                  <li class="youtube">
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                  </li>
+                  <li class="facebook">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                  </li>
+                </ul>
+              </div>
+
+              <li class="menu-item">
+                <a href="#">English<i class="fas fa-sort-down"></i></a>
+                <ul class="drop-menu">
+                  <li class="drop-menu-item">
+                    <a href="#">English</a>
+                  </li>
+                  <li class="drop-menu-item">
+                    <a href="#">English</a>
+                  </li>
+                  <li class="drop-menu-item">
+                    <a href="#">English</a>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="pages_link_footer">
+              <h4 class="head_footer">Pages</h4>
+              <div class="line_head_footer"></div>
+              <ul>
+                <li><a lang="en" href="">Home</a></li>
+                <li>
+                  <a lang="en" href="javascript:refreshPage('#aboutus');"
+                    >About</a
+                  >
+                </li>
+                <li><a lang="en" href="">Sell</a></li>
+                <li><a lang="en" href="">Purchase</a></li>
+                <li><a lang="en" href="">Services</a></li>
+                <li><a lang="en" href="">Offer_Zone</a></li>
+                <li><a lang="en" href="">Suggestions</a></li>
+                <li><a lang="en" href="">Careers</a></li>
+                <li>
+                  <a lang="en" href="javascript:refreshPage('#contactus');"
+                    >Contact_us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="pages_link_footer">
+              <h4 lang="en" class="head_footer">Catagories</h4>
+              <div class="line_head_footer"></div>
+              <ul>
+                <li><a lang="en" href="">Machinery</a></li>
+                <li><a lang="en" href="">Livestock</a></li>
+                <li><a lang="en" href="">Crop</a></li>
+                <li><a lang="en" href="">Property_sale_contract</a></li>
+                <li><a lang="en" href="">Biomass</a></li>
+                <li><a lang="en" href="">Silage</a></li>
+                <li><a lang="en" href="">Pump_Motor_Dealer</a></li>
+                <li><a lang="en" href="">Pesticides_Seeds_Fertilizer</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="contact_footer">
+              <h4 lang="en" class="head_footer">Get in touch</h4>
+              <div class="line_head_footer"></div>
+
+              <p>
+                No.253/6 & 7, Vasanthapura main Road, Near BRV school, Bangalore
+                560078 <br />
+                Phone : +91 9513400800 <br />
+                Email : support@kisangateway.com
+              </p>
+
+              <h4 class="head_footer">Subscribe</h4>
+              <div class="line_head_footer"></div>
+
+              <div class="newletter">
+                <input placeholder="Your email" type="email" name="email" />
+                <button type="button" class="subscribe">SUBSCRIBE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="bottom_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="copyright">
+              <p>2021 © Kisan Gateway. All Rights Reserved.</p>
+            </div>
+          </div>
+          <div class="col-md-7">
+            <div class="links_bottom_footer">
+              <ul>
+                <li><a href="">Terms And Conditions</a></li>
+                <li><a href="">Privacy Policy</a></li>
+                <li><a href="">Refund Policy</a></li>
+                <li><a href="">Ads Policy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector("#login_username")
+        .addEventListener("keypress", function (evt) {
+          if (
+            (evt.which != 8 && evt.which != 0 && evt.which < 48) ||
+            evt.which > 57
+          ) {
+            evt.preventDefault();
+          }
+        });
+      $(document).on("change", "#countryCodeId_login", function (e) {
+        if ($("#countryCodeId_login").val().length == 3) {
+          $("#countryCodeId_login")[0]["style"]["width"] = "90px";
+        } else if ($("#countryCodeId_login").val().length == 4) {
+          $("#countryCodeId_login")[0]["style"]["width"] = "100px";
+        } else if ($("#countryCodeId_login").val().length == 1) {
+          $("#countryCodeId_login")[0]["style"]["width"] = "70px";
+        } else {
+          $("#countryCodeId_login")[0]["style"]["width"] = "80px";
+        }
+      });
+
+      $(document).on("keyup", "#login_username", function (e) {
+        if (
+          $("#login_username").val() == "" ||
+          $("#login_username").val().length <= 9 ||
+          $("#login_username").val().length > 10
+        ) {
+          $("#loginbuttonid").attr("disabled", true);
+          $("#login_error").show();
+          $("#login_error").text("Please provide valid phone number");
+        } else {
+          $("#loginbuttonid").removeAttr("disabled");
+          $("#login_error").hide();
+        }
+      });
+      function myFunction() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var menu = "close";
+        $(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(
+          function () {
+            if (menu === "close") {
+              $(this)
+                .parent()
+                .next(".mobile-nav")
+                .css("transform", "translate(0, 0)");
+              menu = "open";
+            } else {
+              $(this)
+                .parent()
+                .next(".mobile-nav")
+                .css("transform", "translate(-100%, 0)");
+              menu = "close";
+            }
+          }
+        );
+        loadProfileDetails();
+        loadLanguages();
+        loadCountryCodes();
+        window.onhashchange = function () {
+          loadPage();
+          loadLanguages();
+        };
+        loadPage();
+        headerDetails();
+        // lookupSystemResource('language/list', handleCountryList);
+      });
+    </script>
+
+    <script type="text/javascript">
+      $(".user_p").click(function () {
+        // Close all open windows
+        $(".user_profile").stop().slideUp(300);
+        // Toggle this window open/close
+        $(this).next(".user_profile").stop().slideToggle(300);
+        //hitter test//
+        $(".hitter").show();
+      });
+    </script>
+  </body>
+</html>

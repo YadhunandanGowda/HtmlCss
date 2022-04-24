@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <div class="laed_head mb-5">
+                                        <h2 lang="en"><span lang="en">verify </span>  OTP</h2>
+                                    </div>
+
+                                    <div class="register_main">
+                                    <!-- <div class="">
+                                        <ul class="nav rg_nav d-flex flex-wrap">
+                                          <li class="w-50 active">
+                                                <div lang="en" class="reg_btn1">
+                                                    Farmer
+                                                </div>
+                                          </li>
+
+                                          <li class="w-50">
+                                                <div lang="en" class="reg_btn2">
+                                                    Dealers
+                                                </div>
+                                          </li>
+
+                                          <li class="w-50">
+                                                <div lang="en" class="reg_btn3">
+                                                    SERVICE_PROVIDER
+                                                </div>
+                                          </li>
+
+                                          <li class="w-50">
+                                                <div lang="en" class="reg_btn4">
+                                                    Others
+                                                </div>
+                                          </li>
+
+                                      </ul>
+                                    </div> -->
+
+                                        <div class="re_form">
+                                            <p lang="en" class="verification">We_have_sent_a_verification_code_to</p>
+
+                                            <p class="m-no" id="p_no"></p>
+
+                                            <div class="d-flex flex-row otp_input">
+                                                <input id="otp_letter1" type="text" maxlength="1" class="text-center form-control mobile-verify pass" autofocus="">
+                                                <input id="otp_letter2" type="text" maxlength="1" class="text-center form-control mobile-verify pass">
+                                                <input id="otp_letter3" type="text" maxlength="1" class="text-center form-control mobile-verify pass">
+                                                <input id="otp_letter4" type="text" maxlength="1" class="text-center form-control mobile-verify pass">
+                                                <input id="otp_letter5" type="text" maxlength="1" class="text-center form-control mobile-verify pass">
+                                                <input id="otp_letter6" type="text" maxlength="1" class="text-center form-control mobile-verify pass">
+                                            </div>
+                                            <button lang="en" class="send_otp_reg" onclick=" $('#register_error').hide(); verifyOTP();">VERIFY_OTP</button>
+
+                                            <div class="link_ver">
+                                                <span lang="en">Didnt_recieive_code</span>
+                                                <a href="javascript:resendOTPForAuth(selected_phone_number);"><span lang="en">Resend_now</span> </a>
+                                            </div>
+                                            <div id="resentotpmsg" style="display: none;" class="alert_m"></div>
+                                            <hr>
+
+                                            <p lang="en" class="member">If_you_are_member_please</p>
+
+                                            <div class="text-center">
+                                                <button lang="en" data-bs-toggle="modal" data-bs-target="#login_popup" class="reg_login mb-2 text-center">
+                                                     Login
+                                                </button>
+                                            </div>
+
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 mb-4">
+                                    <div class="right_banner">
+                                        <a href="">
+                                            <img class="img1" width="100%" src="images/jone_deere.png">
+                                        </a>
+                                        <a href="">
+                                            <img class="img2 mb-4" width="100%" src="images/tata_motors.png">
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                                
+                            
+                            </div>
+                        </div>
+
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/js.cookie.js" charset="utf-8" type="text/javascript"></script>
+	    <script src="js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var menu = "close";
+                setPhoneNumber('p_no');
+                $(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function () {
+                    if (menu === "close") {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
+                        menu = "open";
+                    } else {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
+                        menu = "close";
+                    }
+                });
+                
+                $('.mobile-verify.pass').on('keyup', function() {
+                    if ($(this).val()) {
+                        $(this).next().focus();
+                    }
+                });
+                //loadLanguages();
+            });
+            function myFunction() {
+                var x = document.getElementById("myDIV");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script type="text/javascript">
+            jQuery(document).ready(function ($) {
+                "use strict";
+                $("#customers-testimonials").owlCarousel({
+                    loop: true,
+                    center: true,
+                    items: 3,
+                    margin: 30,
+                    autoplay: true,
+                    dots: true,
+                    nav: true,
+                    autoplayTimeout: 8500,
+                    smartSpeed: 450,
+                    navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        768: {
+                            items: 2,
+                        },
+                        1170: {
+                            items: 3,
+                        },
+                    },
+                });
+            });
+
+            
+        </script>
+    </body>
+</html>

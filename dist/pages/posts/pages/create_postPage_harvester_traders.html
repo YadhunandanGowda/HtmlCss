@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="section1" class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <section class="wizard-section">
+                                        <div class="no-gutters">
+                                            <div class="form-wizard">
+                                                        <div class="laed_head">
+                                                            <h2 class="w-100">
+                                                                <span>Harvester </span> Information
+                                                            </h2>
+                                                            <p id="breadcrumbid" class="page_titall"></p>
+                                                        </div>
+                                                    </br>
+                                                        
+                                                        <div class="lead_body_content">
+                                                            <div class="form_machine row">
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="TOHid" class="form-label">Type Of Harvester <span class="text-danger">*</span></label>
+                                                                    <select class="form-select" id="TOHid">
+                                                                        <option value="Self propelled">Self propelled </option>
+                                                                        <option value="Tractor mounted">Tractor mounted </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="brandid" class="form-label">Select Brand</label>
+                                                                    <select class="form-select" id="brandid">
+                                                                        
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="modelid" class="form-label">Select Model <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="modelid" placeholder="" />
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="hpid" class="form-label">Required HP <span class="text-danger">*</span></label>
+                                                                    <select class="form-select" id="hpid">
+                                                                        <option value="90-100HP">90-100HP </option>
+                                                                        <option value="101-150HP">101-150HP </option>
+                                                                        <option value="151-200HP">151-200HP </option>
+                                                                        <option value="201-250HP">201-250HP </option>
+                                                                        <option value="251-300HP">251-300HP </option>
+                                                                        <option value="301-350HP">301-350HP </option>
+                                                                        <option value="351-400HP">351-400HP </option>
+                                                                        <option value="401HP & Above">401HP & Above </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                        <label for="typeofcropid">Type Of Crop <span class="text-danger">*</span></label>
+                                                                        <div id="myMultiselect" class="multiselect">
+                                                                          <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
+                                                                            <select id="typeofcropid" class="form-select">
+                                                                              <option>Please choose</option>
+                                                                            </select>
+                                                                            <div class="overSelect"></div>
+                                                                          </div>
+                                                                          <div id="mySelectOptions">
+                                                                            <label for='1'><input type='checkbox' id='1' onchange='checkboxStatusChange()' value='MUSTARD' />MUSTARD </label>
+                                                                            <label for='2'><input type='checkbox' id='2' onchange='checkboxStatusChange()' value='SUNFLOWER' />SUNFLOWER </label>
+                                                                            <label for='3'><input type='checkbox' id='3' onchange='checkboxStatusChange()' value='OIL SEEDS' />OIL SEEDS </label>
+                                                                            <label for='4'><input type='checkbox' id='4' onchange='checkboxStatusChange()' value='SUGARCANE' />SUGARCANE </label>
+                                                                            <label for='5'><input type='checkbox' id='5' onchange='checkboxStatusChange()' value='COTTON' />COTTON </label>
+                                                                            <label for='6'><input type='checkbox' id='6' onchange='checkboxStatusChange()' value='JOWAR' />JOWAR </label>
+                                                                            <label for='7'><input type='checkbox' id='7' onchange='checkboxStatusChange()' value='BAJRA' />BAJRA </label>
+                                                                            <label for='8'><input type='checkbox' id='8' onchange='checkboxStatusChange()' value='GRAM' />GRAM </label>
+                                                                            <label for='9'><input type='checkbox' id='9' onchange='checkboxStatusChange()' value='CHILI' />CHILI </label>
+                                                                            <label for='10'><input type='checkbox' id='10' onchange='checkboxStatusChange()' value='GROUNDNUT' />GROUNDNUT </label>
+                                                                            <label for='11'><input type='checkbox' id='11' onchange='checkboxStatusChange()' value='SPICES' />SPICES </label>
+                                                                            <label for='12'><input type='checkbox' id='12' onchange='checkboxStatusChange()' value='FLORICULTURE' />FLORICULTURE </label>
+                                                                            <label for='13'><input type='checkbox' id='13' onchange='checkboxStatusChange()' value='MEDICINAL/AROMATIC PLANTS' />MEDICINAL/AROMATIC PLANTS </label>
+                                                                            <label for='14'><input type='checkbox' id='14' onchange='checkboxStatusChange()' value='BETEL VINE' />BETEL VINE </label>
+                                                                            <label for='15'><input type='checkbox' id='15' onchange='checkboxStatusChange()' value='MUSHROOM' />MUSHROOM </label>
+                                                                            <label for='16'><input type='checkbox' id='16' onchange='checkboxStatusChange()' value='HONEY PRODUCTION' />HONEY PRODUCTION </label>
+                                                                            <label for='17'><input type='checkbox' id='17' onchange='checkboxStatusChange()' value='JUTE' />JUTE </label>
+                                                                            <label for='18'><input type='checkbox' id='18' onchange='checkboxStatusChange()' value='TUR' />TUR </label>
+                                                                            <label for='19'><input type='checkbox' id='19' onchange='checkboxStatusChange()' value='DATES' />DATES </label>
+                                                                            <label for='20'><input type='checkbox' id='20' onchange='checkboxStatusChange()' value='MOONG' />MOONG </label>
+                                                                            <label for='21'><input type='checkbox' id='21' onchange='checkboxStatusChange()' value='SOYBEAN' />SOYBEAN </label>
+                                                                            <label for='22'><input type='checkbox' id='22' onchange='checkboxStatusChange()' value='NIGER' />NIGER </label>
+                                                                            <label for='23'><input type='checkbox' id='23' onchange='checkboxStatusChange()' value='RAGI' />RAGI </label>
+                                                                            <label for='24'><input type='checkbox' id='24' onchange='checkboxStatusChange()' value='REDGRAM' />REDGRAM </label>
+                                                                            <label for='25'><input type='checkbox' id='25' onchange='checkboxStatusChange()' value='WALNUTS' />WALNUTS </label>
+                                                                            <label for='26'><input type='checkbox' id='26' onchange='checkboxStatusChange()' value='TEA' />TEA </label>
+                                                                            <label for='27'><input type='checkbox' id='27' onchange='checkboxStatusChange()' value='COFFEE' />COFFEE </label>
+                                                                            <label for='28'><input type='checkbox' id='28' onchange='checkboxStatusChange()' value='TOBACCO' />TOBACCO </label>
+                                                                            <label for='29'><input type='checkbox' id='29' onchange='checkboxStatusChange()' value='SILK COCOONS' />SILK COCOONS </label>
+                                                                            <label for='30'><input type='checkbox' id='30' onchange='checkboxStatusChange()' value='RUBBER' />RUBBER </label>                                                                            
+                                                                          </div>
+                                                                        </div>
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="yearofpurchaseid" class="form-label">Year of Purchase <span class="text-danger">*</span></label>
+                                                                    <input type="date" class="form-control" id="yearofpurchaseid">
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="CBW_MSOid" class="form-label">Cutter Bar Width <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="CBW_MSOid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="LWTid" class="form-label">Length and Width in Transport <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="LWTid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="Registrationid" class="form-label">Registration Number <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="Registrationid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="priceid" class="form-label">Expected Price <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="priceid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="Descriptionid" class="form-label">Description</label>
+                                                                    <textarea class="form-control" id="Descriptionid" rows="2"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="assign_c_main">
+                                                                <div class="assign_c">
+                                                                    <p>Assign Contact Details</p>
+                                                                    <div class="row">
+                                                                        <div class="form_div col-md-6">
+                                                                            <label for="modal" class="form-label">Name <span class="text-danger">*</span></label>
+                                                                            <input type="text" class="form-control" id="nameId" placeholder="Enter Name" />
+                                                                        </div>
+
+                                                                        <div class="form_div col-md-6">
+                                                                            <label for="modal" class="form-label">Phone <span class="text-danger">*</span></label>
+                                                                            <input type="text" class="form-control" id="phoneId" placeholder="Enter Phone" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group clearfix button_div text-right">
+                                                                <a href="javascript:refreshPage('#create_post_address'+ getPathParameters());" class="form-wizard-next-btn">
+                                                                    <div id="add_address_id" class="add_address">Add Address <i class="fas fa-chevron-right"></i></div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="right_banner">
+                                        <a href="">
+                                            <img class="img1" width="100%" src="images/jone_deere.png" />
+                                        </a>
+                                        <a href="">
+                                            <img class="img2" width="100%" src="images/tata_motors.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer_zone">
+                <h3 class="section_head text-white">OFFER ZONE</h3>
+                <div class="container">
+                    <div id="customers-testimonials" class="owl-carousel">
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="bg_news">
+                    <h3 class="section_head text-white">You can register as a</h3>
+                    <p class="section_des text-white">Get right services for your need</p>
+                    <div class="container">
+                        <p class="view_all">SEE ALL</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">28th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Farmer webinar</h3>
+                                    <p class="date">29th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">30th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide text-center">
+                            <a href=""><button type="button">Farmers Guide and information</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if(localStorage["breadcrumb"].length > 0){
+                    breadcrumb = localStorage["breadcrumb"].split(',');
+                }
+                listUsersPost();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if(getUrlParameter("ListingId") != ""){
+                    LoadListingposts(getUrlParameter("ListingId"));
+                }
+                listBrands('Harvester');
+                $('#add_address_id').click(function(){
+                    var TOHid = $('#TOHid').val();
+                    var brandid = $('#brandid').val();
+                    var modelid = $('#modelid').val();
+                    var hpid = $('#hpid').val();
+                    var CBW_MSOid = $('#CBW_MSOid').val();
+                    var priceid = $('#priceid').val();
+                    var Descriptionid = $('#Descriptionid').val();
+                    var yearofpurchaseid = $('#yearofpurchaseid').val();
+                    var Registrationid = $('#Registrationid').val();
+                    var LWTid = $('#LWTid').val();
+                    var typeofcropid = $('#typeofcropid').val();
+
+                    var inputdata = {
+                        "M_Brand":brandid,
+                        "M_Model":modelid,
+                        "M_ExPrice":priceid,
+                        "description":Descriptionid,
+                        "M_YOP":yearofpurchaseid,
+                        "M_HP":hpid,
+                        'M_TOH':TOHid,
+                        'M_CBW_MSO':CBW_MSOid,
+                        "M_RegNo":Registrationid,
+                        'M_LWT':LWTid,
+                        'M_TOCrop':typeofcropid
+                    }
+
+                    AddPostFormData(inputdata);
+                });
+            });
+        </script>
+    </body>
+</html>

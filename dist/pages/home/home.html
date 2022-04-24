@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="images/main_logo.jpg" type="image/png" />
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/media.css" />
+        <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css" />
+        <title>Home || Kisan Gateway</title>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var menu = "close";
+                loadCustomerTestimonials();
+                loadProfileDetails();
+                listUserAccessDashboard();
+                $(".mobile-one .menu-toggle, .mobile-three .menu-toggle").click(function () {
+                    if (menu === "close") {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(0, 0)");
+                        menu = "open";
+                    } else {
+                        $(this).parent().next(".mobile-nav").css("transform", "translate(-100%, 0)");
+                        menu = "close";
+                    }
+                });
+                $("#hello_div_access").change(function () {
+                    setDashboardData($("#hello_div_access").val());
+                });
+                
+            });
+        </script>
+
+    </head>
+    <body>
+
+        <main class="main_content">
+            <section class="slider_div home_slider">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <a href="">
+                                <img src="images/slider2.jpg" class="d-block w-100" alt="slider_img" />
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/slider2.jpg" class="d-block w-100" alt="slider_img" />
+                            </a>
+                        </div>
+                        <div class="carousel-item">
+                            <a href="">
+                                <img src="images/slider2.jpg" class="d-block w-100" alt="slider_img" />
+                            </a>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"><i class="fas fa-chevron-left"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"><i class="fas fa-chevron-right"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="hello_div">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <div class="hello_name">
+                                <p lang="en" class="p_hello">Hello</p>
+                                <h1 id="hello_div_name"></h1>
+                                <select class="harvester" id="hello_div_access" style="border: 0px;"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="scan_div">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="scan_">
+                                            <h2><i class="fas fa-qrcode"></i> Scan code</h2>
+                                            <div lang="en" id="plandashboardid"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <a id="create_post_id" onclick="openCategorySelect();" class="scan_">
+                                            <h2><i class="far fa-edit"></i> create post</h2>
+                                            <p><b id="remaininglistingid"></b> - Remaining Listing</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="hello_box">
+                                <div>
+                                    <h3>18</h3>
+                                    <p lang="en">Leads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="hello_box">
+                                <div>
+                                    <h3>04</h3>
+                                    <p lang="en">Confirmation_Pending</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="hello_box">
+                                <div>
+                                    <h3>15</h3>
+                                    <p lang="en">Appoinments</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="catagory">
+                <div class="catag">
+                    <div class="container">
+                        <div class="catagory_tab">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a lang="en" class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Sell</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a lang="en" class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Buy</a>
+                                </li>
+                            </ul>
+                            <p lang="en" class="tab_des">Choose_your_catagory_to_sell_your_product</p>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                    <div id="category_container" class="row">
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory1.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory2.png" />
+                                                    <p lang="en" class="tab_card_des">Machinery</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory3.png" />
+                                                    <p lang="en" class="tab_card_des">Property_sales</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory4.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory6.png" />
+                                                    <p lang="en" class="tab_card_des">Property_Contracts</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory1.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory1.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory2.png" />
+                                                    <p lang="en" class="tab_card_des">Machinery</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory3.png" />
+                                                    <p lang="en" class="tab_card_des">Property_sales</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory4.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory6.png" />
+                                                    <p lang="en" class="tab_card_des">Property_Contracts</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <a href="">
+                                                <div class="tab_card">
+                                                    <img src="https://lookup-system-resources.s3.ap-south-1.amazonaws.com/public/category/catagory1.png" />
+                                                    <p lang="en" class="tab_card_des">Borewell</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="Services">
+                <div class="container">
+                    <h3 lang="en" class="section_head">SERVICES_WE_OFFER</h3>
+                    <p lang="en" class="section_des">Get_right_services_for_your_need</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service1.png" />
+                                        <p lang="en">Horse_breeding</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service2.png" />
+                                        <p lang="en">Borewell</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service3.png" />
+                                        <p lang="en">Machinery_service</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service4.png" />
+                                        <p lang="en">Livestock_breeding</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service5.png" />
+                                        <p lang="en">Silage</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service6.png" />
+                                        <p lang="en">Motor_Water_pump_services</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service7.png" />
+                                        <p lang="en">Water_soil_testing</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service8.png" />
+                                        <p lang="en">Transporters</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="">
+                                <a href="">
+                                    <div class="Service_box">
+                                        <img src="images/service9.png" />
+                                        <p lang="en">Harvesters</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="register">
+                <div class="container">
+                    <h3 lang="en" class="section_head">YOU_CAN_REGISTER_AS_A</h3>
+                    <p lang="en" class="section_des">Get_right_services_for_your_need</p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <a href="javascript:GetCategoryList('Dealer');">
+                                <div class="register_box 1">
+                                    <div>
+                                        <p><i class="fas fa-user-tie"></i></p>
+                                        <h3 lang="en">Dealer</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="javascript:GetCategoryList('ST');">
+                                <div class="register_box 2">
+                                    <div>
+                                        <p><i class="fas fa-user-tie"></i></p>
+                                        <h3 lang="en">Service_provider</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="javascript:loadDealerForm('Agent');">
+                                <div class="register_box 3">
+                                    <div>
+                                        <p><i class="fas fa-user-tie"></i></p>
+                                        <h3 lang="en">AGENT</h3>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <p lang="en" class="post">And_post_your_best_offers_and_ads_for_farming_industry</p>
+                </div>
+            </section>
+
+            <section class="offer_zone">
+                <h3 lang="en" class="section_head text-white">OFFER_ZONE</h3>
+                <div class="container">
+                    <div id="customers-testimonials" class="owl-carousel">
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="bg_news">
+                    <h3 lang="en" class="section_head text-white">YOU_CAN_REGISTER_AS_A</h3>
+                    <p lang="en" class="section_des text-white">Get_right_services_for_your_need</p>
+                    <div class="container">
+                        <p lang="en" class="view_all">SEE_ALL</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3 lang="en">Sales_webinar</h3>
+                                    <p lang="en" class="date">28th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3 lang="en">Farmer_webinar</h3>
+                                    <p class="date">29th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3 lang="en">Sales_webinar</h3>
+                                    <p class="date">30th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide text-center">
+                            <a href=""><button  lang="en" type="button">Farmers_Guide_and_information</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    
+    </body>
+
+</html>

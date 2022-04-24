@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <main class="main_content">
+            <div class="pg_top_banner">
+                <div class="pg_top_bg">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div id="section1" class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="lead_section">
+                <div class="lead_main">
+                    <div class="container">
+                        <div class="lead_bg">
+                            <div class="row">
+                                <div class="col-md-8 mb-4">
+                                    <section class="wizard-section">
+                                        <div class="no-gutters">
+                                            <div class="form-wizard">
+                                                        <div class="laed_head">
+                                                            <h2 class="w-100">
+                                                                <span>Machine </span> Information
+                                                            </h2>
+                                                            <p id="breadcrumbid" class="page_titall"></p>
+                                                        </div>
+                                                    </br>
+                                                        <div class="lead_body_content">
+                                                            <div class="form_machine row">
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="brandid" class="form-label">Select Brand</label>
+                                                                    <select class="form-select" id="brandid">
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="modelid" class="form-label">Select Model <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="modelid" placeholder="" />
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="baletypeid" class="form-label">Bale Type <span class="text-danger">*</span></label>
+                                                                    <select class="form-select" id="baletypeid">
+                                                                        <option value="ROUND BALE">ROUND BALE </option>
+                                                                        <option value="SQUARE BALE">SQUARE BALE </option>
+                                                                    </select>
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="balesizeid" class="form-label">Bale Size <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="balesizeid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="baleweightid" class="form-label">Bale Weight <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="baleweightid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="balingcapalityid" class="form-label">Baling Capacity <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="balingcapalityid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="twinenetid" class="form-label">Twine/Net<span class="text-danger">*</span></label>
+                                                                    <select class="form-select" id="twinenetid">
+                                                                        <option value="Twine">Twine </option>
+                                                                        <option value="Net">Net </option>
+                                                                        <option value="Twine/Net">Twine/Net </option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="ptorpmid" class="form-label">PTO RPM <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="ptorpmid" placeholder="" />
+                                                                </div>
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="requiredpowewrid" class="form-label">Required Power (HP) <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="requiredpowewrid" placeholder="" />
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="expectedpriceid" class="form-label">Price <span class="text-danger">*</span></label>
+                                                                    <input type="text" class="form-control" id="expectedpriceid" placeholder="" />
+                                                                </div>
+
+                                                                <div class="form_div col-md-6">
+                                                                    <label for="Descriptionid" class="form-label">Description</label>
+                                                                    <textarea class="form-control" id="Descriptionid" rows="2"></textarea>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="assign_c_main">
+                                                                <div class="assign_c">
+                                                                    <p>Assign Contact Details</p>
+                                                                    <div class="row">
+                                                                        <div class="form_div col-md-6">
+                                                                            <label for="modal" class="form-label">Name <span class="text-danger">*</span></label>
+                                                                            <input type="text" class="form-control" id="nameId" placeholder="Enter Name" />
+                                                                        </div>
+
+                                                                        <div class="form_div col-md-6">
+                                                                            <label for="modal" class="form-label">Phone <span class="text-danger">*</span></label>
+                                                                            <input type="text" class="form-control" id="phoneId" placeholder="Enter Phone" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group clearfix button_div text-right">
+                                                                <a href="javascript:refreshPage('#create_post_address'+ getPathParameters());" class="form-wizard-next-btn">
+                                                                    <div id="add_address_id" class="add_address">Add Address <i class="fas fa-chevron-right"></i></div>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                <div class="col-md-4 mb-4">
+                                    <div class="right_banner">
+                                        <a href="">
+                                            <img class="img1" width="100%" src="images/jone_deere.png" />
+                                        </a>
+                                        <a href="">
+                                            <img class="img2" width="100%" src="images/tata_motors.png" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row pb-4">
+                            <div class="col-md-12">
+                                <div class="top_banner_img">
+                                    <img class="" alt="top_banner_img" src="images/page_top_banner.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="offer_zone">
+                <h3 class="section_head text-white">OFFER ZONE</h3>
+                <div class="container">
+                    <div id="customers-testimonials" class="owl-carousel">
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+
+                        <a href="">
+                            <div class="item">
+                                <div class="offer_box"></div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="news">
+                <div class="bg_news">
+                    <h3 class="section_head text-white">You can register as a</h3>
+                    <p class="section_des text-white">Get right services for your need</p>
+                    <div class="container">
+                        <p class="view_all">SEE ALL</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">28th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Farmer webinar</h3>
+                                    <p class="date">29th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="news_bob">
+                                    <div class="news_img"></div>
+
+                                    <h3>Sales webinar</h3>
+                                    <p class="date">30th August</p>
+                                    <p>Lorem Ipsum is simply dummyLorem Ipsum is Lorem Ipsum is simply dummyLorem Ipsum Ipsum Ipsum Ipsum is</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide text-center">
+                            <a href=""><button type="button">Farmers Guide and information</button></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if(localStorage["breadcrumb"].length > 0){
+                    breadcrumb = localStorage["breadcrumb"].split(',');
+                }
+                 
+                
+                listUsersPost();
+            });
+        </script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                if(getUrlParameter("ListingId") != ""){
+                    LoadListingposts(getUrlParameter("ListingId"));
+                }
+                listBrands('Baler');
+                $('#add_address_id').click(function(){
+                    var brandid = $('#brandid').val();
+                    var modelid = $('#modelid').val();
+                    var priceid = $('#priceid').val();
+                    var Descriptionid = $('#Descriptionid').val();
+                    var baletypeid = $('#baletypeid').val();
+                    var balesizeid = $('#balesizeid').val();
+                    var baleweightid = $('#baleweightid').val();
+                    var balingcapalityid = $('#balingcapalityid').val();
+                    var twinenetid = $('#twinenetid').val();
+                    var ptorpmid = $('#ptorpmid').val();
+                    var requiredpowewrid = $('#requiredpowewrid').val();
+
+                    var inputdata = {
+                        "M_Brand":brandid,
+                        "M_Model":modelid,
+                        "M_ExPrice":priceid,
+                        "description":Descriptionid,
+                        'M_BaleType':baletypeid,
+                        'M_BaleSize':balesizeid,
+                        'M_BaleWeight':baleweightid,
+                        'M_BalingCapacity':balingcapalityid,
+                        'M_TwineNet':twinenetid,
+                        'M_PTORPM':ptorpmid,
+                        'M_ReqPower':requiredpowewrid
+                    }
+                    AddPostFormData();
+                });
+            });
+        </script>
+    </body>
+</html>
